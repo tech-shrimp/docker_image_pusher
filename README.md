@@ -15,7 +15,7 @@ https://cr.console.aliyun.com/<br>
 ![](/doc/命名空间.png)
 
 进入访问凭证<br>
-获取用户名（ALIYUN_REGISTRY_USER）<br>
+获取用户名（ALIYUN_REGISTRY_USER <br>
 密码（ALIYUN_REGISTRY_PASSWORD）<br>
 仓库地址（ALIYUN_REGISTRY）<br>
 ![](/doc/用户名密码.png)
