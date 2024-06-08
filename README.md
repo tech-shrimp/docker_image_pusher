@@ -13,7 +13,11 @@ B站，抖音，Youtube全网同名，转载请注明作者<br>
 https://cr.console.aliyun.com/<br>
 启用个人实例，创建一个命名空间（ALIYUN_NAME_SPACE）
 ![](/doc/命名空间.png)
-进入访问凭证，获取用户名（ALIYUN_REGISTRY_USER），密码（ALIYUN_REGISTRY_PASSWORD），仓库地址（ALIYUN_REGISTRY）
+
+进入访问凭证<br>
+获取用户名（ALIYUN_REGISTRY_USER）<br>
+密码（ALIYUN_REGISTRY_PASSWORD）<br>
+仓库地址（ALIYUN_REGISTRY）<br>
 ![](/doc/用户名密码.png)
 
 
