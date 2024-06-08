@@ -1,0 +1,38 @@
+name: Docker
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+
+env:
+  ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
+  ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
+  ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
+  ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
+
+jobs:
+
+  build:
+    name: Pull
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Docker buildx
+      uses: docker/setup-buildx-action@79abd3f86f79a9d68a23c75a09a9a85889262adf
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Build and push image Aliyun
+      run: |
+        docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+        for line in $(cat images.txt); do
+          docker pull $line
+          image_name_tag=$(echo $line | awk -F'/' '{print $NF}')
+          new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image_name_tag"
+          echo "docker tag $image $new_image"
+          docker tag $line $new_image
+          echo "docker push $new_image"
+          docker push $new_image
+        done
