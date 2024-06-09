@@ -4,3 +4,4 @@ kasmweb/nginx:1.25.3
 6053537/portainer-ce:latest
 --platform linux/arm64 cooderl/wewe-rss-sqlite:latest
 xhongc/music_tag_web
+jellyfin/jellyfin:latest
