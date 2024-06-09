@@ -34,7 +34,7 @@ Fork本项目<br>
 
 ### 添加镜像
 打开images.txt文件，添加你想要的镜像，可以带tag，也可以不用(默认latest)<br>
-也可添加--platform xxxxx参数指定镜像架构<br>
+也可添加--platform xxxxx 或 --platform=xxxxx 参数指定镜像架构<br>
 ![](doc/images.png)
 文件提交后，自动进入Github Action构建
 
