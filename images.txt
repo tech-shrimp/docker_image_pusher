@@ -1,3 +1,5 @@
 alpine
-kasmweb/nginx:1.25.3
 python:alpine3.19
+kasmweb/nginx:1.25.3
+--platform linux/arm64 cooderl/wewe-rss-sqlite:latest
+
