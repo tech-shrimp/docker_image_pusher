@@ -14,8 +14,8 @@ https://cr.console.aliyun.com/<br>
 启用个人实例，创建一个命名空间（**ALIYUN_NAME_SPACE**）
 ![](/doc/命名空间.png)
 
-
-获取用户名（**ALIYUN_REGISTRY_USER**)<br>
+访问凭证–>获取环境变量
+用户名（**ALIYUN_REGISTRY_USER**)<br>
 密码（**ALIYUN_REGISTRY_PASSWORD**)<br>
 仓库地址（**ALIYUN_REGISTRY**）<br>
 
@@ -35,7 +35,7 @@ Fork本项目<br>
 文件提交后自动进入Github Action构建
 
 ### 使用镜像
-回到阿里云，镜像仓库，可以将镜像修改为公有。点击任意镜像，可查看镜像状态。
+回到阿里云，镜像仓库，点击任意镜像，可查看镜像状态。(可以改成公开，拉取镜像免登录)
 ![](doc/开始使用.png)
 
 在国内服务器pull镜像：<br>
