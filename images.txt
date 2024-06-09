@@ -1,1 +1,4 @@
+6053537/portainer-ce:latest
+xhongc/music_tag_web
+jellyfin/jellyfin:latest
 dzhuang/tinymediamanager:latest
