@@ -1,3 +1,12 @@
 alpine
 kasmweb/nginx:1.25.3
 python:alpine3.19
+cloudnas/clouddrive2-unstable
+xhofe/alist
+jeessy/ddns-go
+linuxserver/heimdall
+6053537/portainer-ce
+lstcml/n1_verysync
+tailscale/tailscale
+lstcml/n1_zerotier
+tickstep/aliyunpan-sync
