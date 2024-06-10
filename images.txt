@@ -1,1 +1,1 @@
-linuxserver/ombi
+linuxserver/overseerr
