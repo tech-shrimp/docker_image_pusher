@@ -1,1 +1,1 @@
-linuxserver/overseerr
+linuxserver/prowlarr
