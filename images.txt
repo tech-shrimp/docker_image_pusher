@@ -1,1 +1,1 @@
-allanpk716/chinesesubfinder:latest-lite
+xiaoyaliu/alist:latest
