@@ -36,5 +36,5 @@ nyanmisaka/jellyfin:latest
 oldiy/transmission-twc
 shmilyin/nas-tools
 emqx/emqx
-node-red
+nodered/node-red
 deluan/navidrome
