@@ -1,1 +1,1 @@
-linuxserver/ombi
+fallenbagel/jellyseerr
