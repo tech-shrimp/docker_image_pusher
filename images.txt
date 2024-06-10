@@ -1,5 +1,3 @@
-alpine
-python:alpine3.19
-kasmweb/nginx:1.25.3
+python
 --platform linux/arm64 cooderl/wewe-rss-sqlite:latest
-
+1panel/maxkb
