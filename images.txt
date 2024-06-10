@@ -1,1 +1,1 @@
-haroldli/xiaoya-tvbox
+haroldli/xiaoya-tvbox:hostmode
