@@ -4,4 +4,7 @@ jellyfin/jellyfin:latest
 dzhuang/tinymediamanager:latest
 xhofe/alist
 diluka/nas-tools:2.9.1
-
+allanpk716/chinesesubfinder:latest-lite
+linuxserver/jackett:latest
+linuxserver/qbittorrent:latest
+xiaoyaliu/alist:latest
