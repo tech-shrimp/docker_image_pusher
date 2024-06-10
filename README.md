@@ -53,4 +53,4 @@ docker pull registry.cn-hangzhou.aliyuncs.com/shrimp-images/alpine
 ```
 registry.cn-hangzhou.aliyuncs.com 即 ALIYUN_REGISTRY<br>
 shrimp-images 即 ALIYUN_NAME_SPACE<br>
-alpine 即images.txt里面填的镜像<br>
+alpine 即阿里云中显示的镜像名<br>
