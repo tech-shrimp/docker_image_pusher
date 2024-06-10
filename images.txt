@@ -1,3 +1,2 @@
 python
---platform linux/arm64 cooderl/wewe-rss-sqlite:latest
 1panel/maxkb
