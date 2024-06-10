@@ -31,11 +31,19 @@ jobs:
           [[ -z "$line" ]] && continue
           echo "docker pull $line"
           docker pull $line
+          platform=$(echo "$line" | grep -oP '(?<=--platform[ =])[^ ]+')
+          # 如果存在platform拼到镜像名称前面
+          if [ -z "$platform" ]; then
+              platform_prefix=""
+          else
+              platform_prefix="${platform//\//-}_"
+          fi
+          echo "platform is $platform"
           # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
           image=$(echo "$line" | awk '{print $NF}')
           # 获取 镜像名:版本号  例如nginx:1.25.3
           image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
-          new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image_name_tag"
+          new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$image_name_tag"
           echo "docker tag $image $new_image"
           docker tag $image $new_image
           echo "docker push $new_image"
