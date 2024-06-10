@@ -4,3 +4,7 @@
 --platform=linux/arm64 whyour/qinglong:latest
 --platform=linux/arm64 linuxserver/transmission:latest
 --platform=linux/arm64 nevinee/qbittorrent:latest
+--platform=linux/arm64 gdy666/lucky:latest
+--platform=linux/arm64 jxxghp/moviepilot:latest
+--platform=linux/arm64 adguard/adguardhome:latest
+--platform=linux/arm64 containrrr/watchtower:latest
