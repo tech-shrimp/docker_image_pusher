@@ -1,1 +1,1 @@
-iemofun/iemo_amd64:v3.1.3
+allanpk716/chinesesubfinder:latest-lite
