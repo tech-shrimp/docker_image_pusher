@@ -18,11 +18,11 @@ jobs:
     name: Pull
     runs-on: ubuntu-latest
     steps:
-    - name: Setup Docker buildx
-      uses: docker/setup-buildx-action@79abd3f86f79a9d68a23c75a09a9a85889262adf
+    - name: Docker Setup Buildx
+      uses: docker/setup-buildx-action@v3
 
-    - name: Check out code
-      uses: actions/checkout@v2
+    - name: Checkout Code
+      uses: actions/checkout@v4
 
     - name: Build and push image Aliyun
       run: |
