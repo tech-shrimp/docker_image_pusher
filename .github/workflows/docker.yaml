@@ -31,26 +31,14 @@ jobs:
           [[ -z "$line" ]] && continue
           echo "docker pull $line"
           docker pull $line
-          # # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
-          # image=$(echo "$line" | awk '{print $NF}')
-          # # 获取 镜像名:版本号  例如nginx:1.25.3
-          # image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
-          # new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image_name_tag"
-          # echo "docker tag $image $new_image"
-          # docker tag $image $new_image
-          # echo "docker push $new_image"
-          # docker push $new_image
-          if [[ $line != *":"* ]]; then
-            line_tmp="$line:latest"
-            line=$line_tmp
-          fi
-          image_old=$(echo "$line" | awk '{print $NF}')
-          line_a=$(echo "$line" | tr '/' '-')
-          image_name=$(echo "$line_a" | awk -F':' '{print $1}')
-          image_name_tag=$(echo "$line" | awk -F':' '{print $NF}')
-          image="$image_name:$image_name_tag"
-          echo "docker tag $image_old $image"
-          docker tag $image_old $image
-          echo "docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image"
-          docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image
+          # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
+          image=$(echo "$line" | awk '{print $NF}')
+          # 获取 镜像名:版本号  例如nginx:1.25.3
+          image_name_tag=$(echo "$image")
+          new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image_name_tag"
+          echo "docker tag $image $new_image"
+          docker tag $image $new_image
+          echo "docker push $new_image"
+          docker push $new_image
+          
         done < images.txt
