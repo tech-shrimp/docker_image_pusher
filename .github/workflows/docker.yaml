@@ -44,15 +44,13 @@ jobs:
             line_tmp="$line:latest"
             line=$line_tmp
           fi
+          image_old=$(echo "$line" | awk '{print $NF}')
           line_a=$(echo "$line" | tr '/' '-')
           image_name=$(echo "$line_a" | awk -F':' '{print $1}')
-        
           image_name_tag=$(echo "$line" | awk -F':' '{print $NF}')
-          
           image="$image_name:$image_name_tag"
-
-          echo "docker tag $line $image"
-          docker tag $line $image
+          echo "docker tag $image_old $image"
+          docker tag $image_old $image
           echo "docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image"
           docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image
         done < images.txt
