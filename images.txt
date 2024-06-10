@@ -1,1 +1,1 @@
-allanpk716/chinesesubfinder:latest-lite
+linuxserver/ombi
