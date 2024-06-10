@@ -34,7 +34,7 @@ jobs:
           # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
           image=$(echo "$line" | awk '{print $NF}')
           # 获取 镜像名:版本号  例如nginx:1.25.3
-          image_name_tag=$(echo "$image" | S'{print $NF}')
+          image_name_tag=$(echo "$image" | '{print $NF}')
           new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image_name_tag"
           echo "docker tag $image $new_image"
           docker tag $image $new_image
