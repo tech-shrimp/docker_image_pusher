@@ -34,10 +34,14 @@ Fork本项目<br>
 
 ### 添加镜像
 打开images.txt文件，添加你想要的镜像，可以带tag，也可以不用(默认latest)<br>
-也可添加--platform xxxxx 或 --platform=xxxxx 参数指定镜像架构<br>
+也可添加 --platform=xxxxx 的参数指定镜像架构<br>
 ![](doc/images.png)
 文件提交后，自动进入Github Action构建
 
+### 多架构
+阿里镜像服务个人版并不提供多架构功能，需要在images.txt中用 --platform=xxxxx手动指定镜像架构
+指定后的架构会以前缀的形式放在镜像名字前面
+![](doc/多架构.png)
 
 ### 使用镜像
 回到阿里云，镜像仓库，点击任意镜像，可查看镜像状态。(可以改成公开，拉取镜像免登录)
