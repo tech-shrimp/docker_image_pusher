@@ -29,7 +29,6 @@ jobs:
         docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
         while IFS= read -r line; do
           [[ -z "$line" ]] && continue
-          echo $line >> test.txt
           echo "docker pull $line"
           docker pull $line
           # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
@@ -42,4 +41,3 @@ jobs:
           echo "docker push $new_image"
           docker push $new_image
         done < images.txt
-        echo -n "" > images.txt
