@@ -44,7 +44,7 @@ jobs:
             line_tmp="$line:latest"
             line=$line_tmp
           fi
-          line=echo "$line" | tr '/' '-'
+          line=$(echo "$line" | tr '/' '-')
           image_name=$(echo "$line" | awk -F':' '{print $1}')
         
           image_name_tag=$(echo "$line" | awk -F':' '{print $NF}')
