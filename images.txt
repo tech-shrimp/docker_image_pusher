@@ -1,4 +1,6 @@
 alpine
+node
+nginx
 python:alpine3.19
 kasmweb/nginx:1.25.3
 --platform=linux/amd64 redis:7.0.15-alpine3.20
