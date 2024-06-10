@@ -1,3 +1,4 @@
+--platform=linux/arm64 a76yyyy/qiandao:latest
 --platform=linux/arm64 portainer/portainer-ce:latest
 --platform=linux/arm64 xhofe/alist:latest
 --platform=linux/arm64 whyour/qinglong:latest
