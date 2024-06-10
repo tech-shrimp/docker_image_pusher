@@ -1,2 +1,2 @@
-linuxserver/prowlarr
+cnk3x/xunlei
 
