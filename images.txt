@@ -1,1 +1,2 @@
+metacubex/mihomo:Alpha
 --platform linux/amd64 haroldli/xiaoya-tvbox:hostmode
