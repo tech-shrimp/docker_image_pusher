@@ -1,1 +1,1 @@
-fallenbagel/jellyseerr
+linuxserver/overseerr
