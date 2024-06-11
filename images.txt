@@ -5,4 +5,4 @@ zishuo/embyserver
 cloudnas/clouddrive2-unstable
  xhofe/alist-aria2:latest
 linkease/runmynas:latest
-linkease/runmynas
+stilleshan/x-ui
