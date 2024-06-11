@@ -3,3 +3,24 @@ python:alpine3.19
 kasmweb/nginx:1.25.3
 --platform=linux/amd64 redis:7.0.15-alpine3.20
 --platform=linux/arm/v7 redis:7.0.15-alpine3.20
+linuxserver/syncthing:latest
+linuxserver/resilio-sync
+p3terx/ariang
+p3terx/aria2-pro
+linuxserver/qbittorrent
+minio/minio
+xavierniu/cloudreve
+cloudreve/cloudreve
+b3log/siyuan:latest
+filebrowser/filebrowser
+portainer/portainer-ce
+louislam/dockge
+lovechen/embyserver:latest
+linuxserver/jellyfin
+ffdfgdfg/nps
+ffdfgdfg/npc
+helloz/onenav
+ngoduykhanh/wireguard-ui:latest
+linuxserver/wireguard:latest
+ghcr.io/wg-easy/wg-easy
+sanjusss/aliyun-ddns
