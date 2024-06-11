@@ -1,5 +1,5 @@
 xiaoyaliu/alist:latest
 jeessy/ddns-go
 nyanmisaka/jellyfin
-zishuo/embyserver:Latest
+zishuo/embyserver
 cloudnas/clouddrive2-unstable
