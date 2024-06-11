@@ -1,4 +1,4 @@
-icloudpd
+boredazfcuk/icloudpd
 nginx
 kasmweb/nginx:1.25.3
 xhofe/alist:latest
