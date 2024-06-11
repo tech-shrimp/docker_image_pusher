@@ -5,4 +5,5 @@ kasmweb/nginx:1.25.3
 
 ghcr.io/immich-app/immich-server:release
 ghcr.io/immich-app/immich-machine-learning:release
+
 jxxghp/moviepilot:latest
