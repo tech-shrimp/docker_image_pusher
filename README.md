@@ -51,9 +51,19 @@ shrimp-images 即 ALIYUN_NAME_SPACE<br>
 alpine 即阿里云中显示的镜像名<br>
 
 ### 多架构
-阿里镜像服务个人版并不提供多架构功能，需要在images.txt中用 --platform=xxxxx手动指定镜像架构
+需要在images.txt中用 --platform=xxxxx手动指定镜像架构
 指定后的架构会以前缀的形式放在镜像名字前面
 ![](doc/多架构.png)
+
+### 镜像重名
+程序自动判断是否存在名称相同, 但是属于不同命名空间的镜像。
+如果存在，会把命名空间作为前缀加在镜像名称前。
+例如:
+```
+xhofe/alist
+xiaoyaliu/alist
+```
+![](doc/镜像重名.png)
 
 ### 定时执行
 修改/.github/workflows/docker.yaml文件

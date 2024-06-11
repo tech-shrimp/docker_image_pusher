@@ -1,5 +1,4 @@
-alpine
-python:alpine3.19
+nginx
 kasmweb/nginx:1.25.3
---platform=linux/amd64 redis:7.0.15-alpine3.20
---platform=linux/arm/v7 redis:7.0.15-alpine3.20
+xhofe/alist:latest
+--platform=linux/arm64 xiaoyaliu/alist
