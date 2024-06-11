@@ -1,2 +1,3 @@
 xiaoyaliu/alist:latest
 jeessy/ddns-go
+nyanmisaka/jellyfin
