@@ -1,3 +1,4 @@
 golang:alpine
 node:14-alpine3.15
 alpine
+yiruiduan/rclone:v0.0.1
