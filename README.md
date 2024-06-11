@@ -26,10 +26,12 @@ https://cr.console.aliyun.com/<br>
 
 ### Fork本项目
 Fork本项目<br>
-进入您自己的项目，点击Action，启用Github Action功能
-配置环境变量，进入Settings->Secret and variables->Actions->New Repository secret
+#### 启动Action
+进入您自己的项目，点击Action，启用Github Action功能<br>
+#### 配置环境变量
+进入Settings->Secret and variables->Actions->New Repository secret
 ![](doc/配置环境变量.png)
-将上一步的 ALIYUN_NAME_SPACE，ALIYUN_REGISTRY_USER，ALIYUN_REGISTRY_PASSWORD，ALIYUN_REGISTRY
+将上一步的 ALIYUN_NAME_SPACE,ALIYUN_REGISTRY_USER，ALIYUN_REGISTRY_PASSWORD，ALIYUN_REGISTRY
 的值配置成环境变量
 
 ### 添加镜像
@@ -56,7 +58,7 @@ alpine 即阿里云中显示的镜像名<br>
 ![](doc/多架构.png)
 
 ### 镜像重名
-程序自动判断是否存在名称相同, 但是属于不同命名空间的镜像。
+程序自动判断是否存在名称相同, 但是属于不同命名空间的情况。
 如果存在，会把命名空间作为前缀加在镜像名称前。
 例如:
 ```
