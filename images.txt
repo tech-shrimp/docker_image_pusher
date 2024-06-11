@@ -1,1 +1,1 @@
-openjdk:8
+advplyr/audiobookshelf
