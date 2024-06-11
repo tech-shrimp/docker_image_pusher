@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
-  # 定时执行，此处使用UTC时间
-  #schedule:
-  #  - cron: '00 23 * * *'
 
 
 env:
@@ -21,10 +18,10 @@ jobs:
     name: Pull
     runs-on: ubuntu-latest
     steps:
-    - name: Setup Docker buildx
+    - name: Docker Setup Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Check out code
+    - name: Checkout Code
       uses: actions/checkout@v4
 
     - name: Build and push image Aliyun
