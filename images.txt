@@ -1,1 +1,2 @@
 xiaoyaliu/alist:latest
+jeessy/ddns-go
