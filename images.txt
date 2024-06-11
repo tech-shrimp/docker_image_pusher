@@ -1,2 +1,1 @@
-mysql
-mysql:8.0.35
+mysql:8.0.37
