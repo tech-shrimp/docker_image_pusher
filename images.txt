@@ -1,4 +1,5 @@
-nginx
+boredazfcuk/icloudpd
 kasmweb/nginx:1.25.3
 xhofe/alist:latest
 --platform=linux/arm64 xiaoyaliu/alist
+
