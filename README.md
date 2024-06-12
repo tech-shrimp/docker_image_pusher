@@ -5,8 +5,9 @@
 
 视频教程：https://www.bilibili.com/video/BV1Zn4y19743/
 
-作者：**技术爬爬虾**<br>
+作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
 B站，抖音，Youtube全网同名，转载请注明作者<br>
+[往期视频汇总](https://github.com/tech-shrimp/me)
 
 ## 使用方式
 
@@ -32,8 +33,9 @@ Fork本项目<br>
 #### 配置环境变量
 进入Settings->Secret and variables->Actions->New Repository secret
 ![](doc/配置环境变量.png)
-将上一步的 ALIYUN_NAME_SPACE,ALIYUN_REGISTRY_USER，ALIYUN_REGISTRY_PASSWORD，ALIYUN_REGISTRY
-的值配置成环境变量
+将上一步的**四个值**<br>
+ALIYUN_NAME_SPACE,ALIYUN_REGISTRY_USER，ALIYUN_REGISTRY_PASSWORD，ALIYUN_REGISTRY<br>
+配置成环境变量
 
 ### 添加镜像
 打开images.txt文件，添加你想要的镜像 
