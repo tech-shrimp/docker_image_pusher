@@ -8,3 +8,4 @@ vaultwarden/server:latest
 corentinth/it-tools:latest
 rustdesk/rustdesk-server:latest
 registry.cn-shenzhen.aliyuncs.com/star7th/showdoc:latest
+star7th/showdoc:latest
