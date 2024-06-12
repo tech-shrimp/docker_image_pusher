@@ -4,3 +4,8 @@ k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 xhofe/alist:latest
 #支持指定架构
 --platform=linux/arm64 xiaoyaliu/alist
+pgvector/pgvector:0.7.0-pg15
+registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:v0.7.0
+registry.cn-hangzhou.aliyuncs.com/fastgpt/mongo:5.0.18
+registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-sandbox:v4.8.3
+registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.3
