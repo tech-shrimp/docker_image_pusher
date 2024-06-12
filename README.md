@@ -50,13 +50,13 @@ ALIYUN_NAME_SPACE,ALIYUN_REGISTRY_USER，ALIYUN_REGISTRY_PASSWORD，ALIYUN_REGIS
 回到阿里云，镜像仓库，点击任意镜像，可查看镜像状态。(可以改成公开，拉取镜像免登录)
 ![](doc/开始使用.png)
 
-在国内服务器pull镜像：<br>
+在国内服务器pull镜像, 例如：<br>
 ```
 docker pull registry.cn-hangzhou.aliyuncs.com/shrimp-images/alpine
 ```
-registry.cn-hangzhou.aliyuncs.com 即 ALIYUN_REGISTRY<br>
-shrimp-images 即 ALIYUN_NAME_SPACE<br>
-alpine 即阿里云中显示的镜像名<br>
+registry.cn-hangzhou.aliyuncs.com 即 ALIYUN_REGISTRY(阿里云仓库地址)<br>
+shrimp-images 即 ALIYUN_NAME_SPACE(阿里云命名空间)<br>
+alpine 即 阿里云中显示的镜像名<br>
 
 ### 多架构
 需要在images.txt中用 --platform=xxxxx手动指定镜像架构
