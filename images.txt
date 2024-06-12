@@ -9,3 +9,9 @@ registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:v0.7.0
 registry.cn-hangzhou.aliyuncs.com/fastgpt/mongo:5.0.18
 registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-sandbox:v4.8.3
 registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.3
+pgvector/pgvector:0.7.0-pg15
+mongo:5.0.18
+ghcr.io/labring/fastgpt-sandbox:v4.8.3
+ghcr.io/labring/fastgpt:v4.8.3
+mysql:8.0.36
+ghcr.io/songquanpeng/one-api:latest
