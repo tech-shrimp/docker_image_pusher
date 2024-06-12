@@ -1,11 +1,12 @@
 nginx
 #支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
+#k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+#xhofe/alist:latest
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
-vaultwarden/server:latest
+#--platform=linux/arm64 xiaoyaliu/alist
+vaultwarden/server
 corentinth/it-tools:latest
-rustdesk/rustdesk-server:latest
-registry.cn-shenzhen.aliyuncs.com/star7th/showdoc:latest
-star7th/showdoc:latest
+corentinth/it-tools:nightly
+rustdesk/rustdesk-server
+#registry.cn-shenzhen.aliyuncs.com/star7th/showdoc:latest
+star7th/showdoc
