@@ -1,1 +1,13 @@
---platform=linux/arm/v7 -t my-baidunetdisk:v7 .
+nginx
+alpine
+busybox
+httpd
+mongo
+redis
+ubuntu
+node
+postgres
+mysql
+memcached
+registry
+hello-world
