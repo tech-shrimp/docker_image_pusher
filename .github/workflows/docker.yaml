@@ -18,11 +18,42 @@ jobs:
     name: Pull
     runs-on: ubuntu-latest
     steps:
-    - name: Docker Setup Buildx
-      uses: docker/setup-buildx-action@v3
+    - name: Before freeing up disk space
+      run: |
+        echo "Before freeing up disk space"
+        echo "=============================================================================="
+        df -hT
+        echo "=============================================================================="
+
+    # 增加可用磁盘空间
+    - name: Maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+
+        root-reserve-mb: 2048
+        swap-size-mb: 128
+        remove-dotnet: 'true'
+        remove-haskell: 'true'
+        # 如果空间还是不够用，可以把以下开启，清理出更多空间
+        # remove-android: 'true'
+        # remove-codeql: 'true'
+        build-mount-path: '/var/lib/docker/'
+
+    - name: Restart docker
+      run: sudo service docker restart
+
+    - name: Free up disk space complete
+      run: |
+        echo "Free up disk space complete"
+        echo "=============================================================================="
+        df -hT
+        echo "=============================================================================="
 
     - name: Checkout Code
       uses: actions/checkout@v4
+
+    - name: Docker Setup Buildx
+      uses: docker/setup-buildx-action@v3
 
     - name: Build and push image Aliyun
       run: |
@@ -112,4 +143,15 @@ jobs:
             docker tag $image $new_image
             echo "docker push $new_image"
             docker push $new_image
+            echo "开始清理磁盘空间"
+            echo "=============================================================================="
+            df -hT
+            echo "=============================================================================="
+            docker rmi $image
+            docker rmi $new_image
+            echo "磁盘空间清理完毕"
+            echo "=============================================================================="
+            df -hT
+            echo "=============================================================================="     
+            
         done < images.txt
