@@ -8,3 +8,4 @@ xhofe/alist:latest
 #--platform=linux/arm64 xiaoyaliu/alist
 chishin/nginx-proxy-manager-zh:latest
 xiaoyaliu/glue
+haroldli/xiaoya-tvbox
