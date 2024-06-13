@@ -34,7 +34,9 @@ jobs:
         swap-size-mb: 128
         remove-dotnet: 'true'
         remove-haskell: 'true'
-        remove-android: 'true'
+        # 如果空间还是不够用，可以把以下开启，清理出更多空间
+        # remove-android: 'true'
+        # remove-codeql: 'true'
         build-mount-path: '/var/lib/docker/'
 
     - name: Restart docker
