@@ -2,8 +2,9 @@ nginx
 hello-world
 python
 k8s.gcr.io/coredns/coredns:v1.8.6
+k8s.gcr.io/descheduler/descheduler:v0.24.1
 #支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
+#k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+#xhofe/alist:latest
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+#--platform=linux/arm64 xiaoyaliu/alist
