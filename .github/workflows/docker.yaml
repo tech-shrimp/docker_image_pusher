@@ -30,7 +30,7 @@ jobs:
         while IFS= read -r line; do
           [[ -z "$line" ]] && continue
           echo "docker pull $line"
-          docker pull $line
+          docker build $line
           # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
           image=$(echo "$line" | awk '{print $NF}')
           # 获取 镜像名:版本号  例如nginx:1.25.3
