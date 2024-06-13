@@ -2,4 +2,4 @@ alpine
 python:alpine3.19
 ubuntu:24.04
 postgres:16.3
-gitlab:latest
+gerritcodereview/gerrit:3.10.0-ubuntu22
