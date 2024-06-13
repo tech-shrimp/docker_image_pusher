@@ -9,3 +9,5 @@ xhofe/alist:latest
 chishin/nginx-proxy-manager-zh:latest
 xiaoyaliu/glue
 haroldli/xiaoya-tvbox
+emby/embyserver
+emby/embyserver:4.8.0.56
