@@ -11,3 +11,4 @@ mysql
 memcached
 registry
 hello-world
+golang
