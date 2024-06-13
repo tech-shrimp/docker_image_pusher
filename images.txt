@@ -1,1 +1,1 @@
-redis/redis-stack-server
+jxxghp/moviepilot:latest
