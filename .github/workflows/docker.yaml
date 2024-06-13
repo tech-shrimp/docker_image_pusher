@@ -61,7 +61,7 @@ jobs:
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
         declare -A temp_map
-        while IFS= read -r line; do
+        while IFS= read -r line || [ -n "$line" ]; do
             # 忽略空行与注释
             [[ -z "$line" ]] && continue
             if echo "$line" | grep -q '^\s*#'; then
@@ -99,7 +99,7 @@ jobs:
         done < images.txt
         
         
-        while IFS= read -r line; do
+        while IFS= read -r line || [ -n "$line" ]; do
             # 忽略空行与注释
             [[ -z "$line" ]] && continue
             if echo "$line" | grep -q '^\s*#'; then
