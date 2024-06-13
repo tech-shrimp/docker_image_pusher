@@ -1,1 +1,1 @@
---platform linux/arm/v7 kevinlad/baidunetdisk-docker
+--platform=linux/arm/v7 -t my-baidunetdisk:v7 .
