@@ -12,3 +12,4 @@ memcached
 registry
 hello-world
 golang
+baiyuetribe/baiduyunpan
