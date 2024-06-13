@@ -1,1 +1,1 @@
-kevinlad/baidunetdisk-docker
+kevinlad/baidunetdisk-docker:arm32v7
