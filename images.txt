@@ -1,1 +1,1 @@
-1panel/maxkb
+kevinlad/baidunetdisk-docker
