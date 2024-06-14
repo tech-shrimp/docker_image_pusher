@@ -3,9 +3,9 @@
 #k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 #xhofe/alist:latest
 #支持指定架构
-#--platform=linux/arm64 xiaoyaliu/alist
-#--platform=linux/arm64 2.6.0
-#--platform=linux/arm64 2.8.0 
+--platform=linux/arm64 xiaoyaliu/alist
+--platform=linux/arm64 2.6.0
+--platform=linux/arm64 2.8.0 
 --platform=linux/arm64 3.0.0 
 --platform=linux/arm64 3.1  
 --platform=linux/arm64 3.3.2
