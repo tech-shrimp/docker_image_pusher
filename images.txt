@@ -1,7 +1,12 @@
-#--platform=linux/arm64 bitnami/kafka:2.6.0
-#--platform=linux/arm64 bitnami/kafka:2.8.0
---platform=linux/arm64 bitnami/kafka:3.0.0
---platform=linux/arm64 bitnami/kafka:3.1
+--platform=linux/arm64 bitnami/kafka:3.2.3
 --platform=linux/arm64 bitnami/kafka:3.3.2
---platform=linux/arm64 bitnami/kafka:3.5.1
+--platform=linux/arm64 bitnami/kafka:3.4.1
+--platform=linux/arm64 bitnami/kafka:3.5.2
 --platform=linux/arm64 bitnami/kafka:3.6.2
+--platform=linux/arm64 bitnami/kafka:3.7.0
+--platform=linux/amd64 bitnami/kafka:3.2.3
+--platform=linux/amd64 bitnami/kafka:3.3.2
+--platform=linux/amd64 bitnami/kafka:3.4.1
+--platform=linux/amd64 bitnami/kafka:3.5.2
+--platform=linux/amd64 bitnami/kafka:3.6.2
+--platform=linux/amd64 bitnami/kafka:3.7.0
