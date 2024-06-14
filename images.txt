@@ -1,7 +1,7 @@
---platform=linux/arm64 php:8.3.8
---platform=linux/arm64 php:8.3.8-fpm
---platform=linux/arm64 php:8.3.8-cli
---platform=linux/arm64 5.6-alpine3.8
+#--platform=linux/arm64 php:8.3.8
+#--platform=linux/arm64 php:8.3.8-fpm
+#--platform=linux/arm64 php:8.3.8-cli
+#--platform=linux/arm64 5.6-alpine3.8
 --platform=linux/arm64 5.6-fpm-alpine3.8
 --platform=linux/arm64 5.6-cli-alpine3.8
 --platform=linux/arm64 7.1.33-alpine3.9
