@@ -11,3 +11,4 @@ xiaoyaliu/glue
 haroldli/xiaoya-tvbox
 emby/embyserver
 emby/embyserver:4.8.0.56
+portainer/portainer-ce:latest
