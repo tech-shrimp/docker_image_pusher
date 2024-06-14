@@ -1,17 +1,3 @@
-
-#--platform=linux/amd64 python:3.2-slim
-#--platform=linux/amd64 python:2.7.9-slim
-
-
---platform=linux/amd64 python:3.12.4-alpine3.20
---platform=linux/amd64 python:3.11.9-alpine3.20
---platform=linux/amd64 python:3.10.14-alpine3.20
---platform=linux/amd64 python:3.9.19-alpine3.20
---platform=linux/amd64 python:3.8.19-alpine3.20
---platform=linux/arm64 python:3.12.4-alpine3.20
---platform=linux/arm64 python:3.11.9-alpine3.20
---platform=linux/arm64 python:3.10.14-alpine3.20
---platform=linux/arm64 python:3.9.19-alpine3.20
---platform=linux/arm64 python:3.8.19-alpine3.20
---platform=linux/amd64 python:3-alpine3.20
---platform=linux/arm64 python:3-alpine3.20
+--platform=linux/amd64 java:8u111-jdk-alpine
+--platform=linux/amd64 java:7u121-jdk-alpine
+--platform=linux/amd64 java:9-jdk
