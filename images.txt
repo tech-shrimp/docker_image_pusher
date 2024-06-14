@@ -4,9 +4,9 @@
 #--platform=linux/arm64 5.6-alpine3.8
 #--platform=linux/arm64 5.6-fpm-alpine3.8
 #--platform=linux/arm64 5.6-cli-alpine3.8
---platform=linux/arm64 7.1.33-alpine3.9
---platform=linux/arm64 7.1.33-fpm-alpine3.9
---platform=linux/arm64 7.1.33-cli-alpine3.9
+#--platform=linux/arm64 7.1.33-alpine3.9
+#--platform=linux/arm64 7.1.33-fpm-alpine3.9
+#--platform=linux/arm64 7.1.33-cli-alpine3.9
 --platform=linux/arm64 7.3.33-alpine3.14
 --platform=linux/arm64 7.3.33-fpm-alpine3.14
 --platform=linux/arm64 7.3.33-cli-alpine3.14
