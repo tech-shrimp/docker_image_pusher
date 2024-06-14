@@ -5,3 +5,4 @@ postgres:16.3
 gerritcodereview/gerrit:3.10.0-ubuntu22
 osixia/openldap:stable
 osixia/phpldapadmin:stable
+gerritcodereview/gerrit:3.10.0
