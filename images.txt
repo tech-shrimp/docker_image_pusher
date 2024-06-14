@@ -1,1 +1,1 @@
-zhangqinghua/fastgpt
+phalanetwork/prb:git-current-v2
