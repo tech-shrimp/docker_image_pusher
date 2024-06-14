@@ -1,17 +1,6 @@
 
-
---platform=linux/amd64 python:3.9.19-slim
---platform=linux/amd64 python:3.8.19-slim
---platform=linux/amd64 python:3.12.4-slim
---platform=linux/amd64 python:3.11.9-slim
---platform=linux/amd64 python:3.10.14-slim
---platform=linux/amd64 python:3.7.17-slim
---platform=linux/amd64 python:3.6-slim
---platform=linux/amd64 python:3.5-slim
---platform=linux/amd64 python:3.4-slim
---platform=linux/amd64 python:3.3-slim
---platform=linux/amd64 python:3.2-slim
---platform=linux/amd64 python:2.7.9-slim
+#--platform=linux/amd64 python:3.2-slim
+#--platform=linux/amd64 python:2.7.9-slim
 
 
 --platform=linux/amd64 python:3.12.4-alpine3.20
