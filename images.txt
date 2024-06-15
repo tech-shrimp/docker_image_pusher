@@ -7,3 +7,5 @@ gerritcodereview/gerrit:3.10.0-ubuntu22
 osixia/openldap:stable
 osixia/phpldapadmin:stable
 gerritcodereview/gerrit:3.10.0
+exoplatform/jdk:openjdk-17-ubuntu-2204
+ubuntu:22.04
