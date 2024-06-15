@@ -9,3 +9,5 @@ osixia/phpldapadmin:stable
 gerritcodereview/gerrit:3.10.0
 exoplatform/jdk:openjdk-17-ubuntu-2204
 ubuntu:22.04
+jenkins/jenkins:2.452.2-lts-jdk17
+jenkins/ssh-agent:latest-jdk17
