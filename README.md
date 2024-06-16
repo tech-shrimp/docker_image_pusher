@@ -7,8 +7,8 @@
 
 视频教程：https://www.bilibili.com/video/BV1Zn4y19743/
 
-作者：**[技术爬爬虾](https://github.com/tech-shrimp/me)**<br>
-B站，抖音，Youtube全网同名，转载请注明作者<br>
+
+
 
 ## 使用方式
 
