@@ -1,4 +1,3 @@
-xhofe/alist-aria2
-xhofe/alist:latest
+mysql:5.7
 --platform linux/arm64 cooderl/wewe-rss-sqlite:latest
 
