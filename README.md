@@ -5,7 +5,7 @@
 - 支持最大40GB的大型镜像<br>
 - 使用阿里云的官方线路，速度快<br>
 
-视频教程：https://www.bilibili.com/video/BV1Zn4y19743/
+视频教程：https://www.bilibili.com/video/BV1Zn4y19743/(转载技术爬爬虾)
 
 
 
