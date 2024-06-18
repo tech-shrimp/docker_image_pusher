@@ -1,9 +1,1 @@
-xiaoyaliu/alist:latest
-jeessy/ddns-go
-nyanmisaka/jellyfin
-zishuo/embyserver
-cloudnas/clouddrive2-unstable
- xhofe/alist-aria2:latest
-linkease/runmynas:latest
-stilleshan/x-ui
 openjdk:8-jdk-alpine
