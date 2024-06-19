@@ -1,3 +1,1 @@
-nashsu/free_ask_internet:latest
-nashsu/free_ask_internet_ui:latest
-searxng/searxng:latest
+1panel/maxkb
