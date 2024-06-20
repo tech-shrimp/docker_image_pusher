@@ -2,6 +2,7 @@ nginx
 mysql:5.7
 openjdk:8
 openjdk:8-jdk-alpine
+java
 #支持私库啊
 # k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 # xhofe/alist:latest
