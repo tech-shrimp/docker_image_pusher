@@ -1,6 +1,16 @@
+
+alpine
+python:alpine3.19
+ubuntu:24.04
+postgres:16.3
+gerritcodereview/gerrit:3.10.0-ubuntu22
+osixia/openldap:stable
+osixia/phpldapadmin:stable
+gerritcodereview/gerrit:3.10.0
+exoplatform/jdk:openjdk-17-ubuntu-2204
+ubuntu:22.04
+jenkins/jenkins:2.452.2-lts-jdk17
+jenkins/ssh-agent:latest-jdk17
+almalinux:9.4
 nginx
-#支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
-#支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+bitnami/minio:latest
