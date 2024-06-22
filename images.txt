@@ -1,6 +1,5 @@
 nginx
 tomcat
-mysql7
 mysql
 # rook-ceph
 rook/ceph:v1.13.3
