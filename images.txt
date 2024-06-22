@@ -5,5 +5,5 @@ xhofe/alist:latest
 #支持指定架构
 --platform=linux/arm64 xiaoyaliu/alist
 
-goharbor/registry-photon:v2.11.0
+docker.io/calico/kube-controllers:master
 
