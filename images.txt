@@ -1,3 +1,8 @@
+nginx
+tomcat
+mysql7
+mysql
+
 # rook-ceph
 rook/ceph:v1.13.3
 gcr.io/k8s-staging-sig-storage/objectstorage-sidecar/objectstorage-sidecar:v20230130-v0.1.0-24-gc0cf995
@@ -11,4 +16,3 @@ registry.k8s.io/sig-storage/csi-provisioner:v3.6.3
 registry.k8s.io/sig-storage/csi-resizer:v1.9.2
 registry.k8s.io/sig-storage/csi-snapshotter:v6.3.2
 rook/ceph:v1.13.3
-
