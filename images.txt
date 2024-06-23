@@ -1,3 +1,6 @@
+#dashboard
+kubernetesui/metrics-scraper:v1.0.8
+kubernetesui/dashboard:v2.7.0
 #calico
 calico/cni:master
 calico/node:master
