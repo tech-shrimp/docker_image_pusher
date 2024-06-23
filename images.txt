@@ -1,6 +1,9 @@
-nginx
-#支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
-#支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+langgenius/dify-api:0.6.11
+langgenius/dify-api:0.6.11
+langgenius/dify-web:0.6.11
+postgres:15-alpine
+redis:6-alpine
+semitechnologies/weaviate:1.19.0
+langgenius/dify-sandbox:0.2.1
+ubuntu/squid:latest
+nginx:latest
