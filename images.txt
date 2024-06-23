@@ -1,5 +1,2 @@
-#calico
-m.daocloud.io/docker.io/calico/cni:master
-m.daocloud.io/docker.io/calico/node:master
-m.daocloud.io/docker.io/calico/kube-controllers:master
-m.daocloud.io/docker.io/calico/typha:master
+m.daocloud.io/registry.k8s.io/metrics-server/metrics-server:v0.6.3
+
