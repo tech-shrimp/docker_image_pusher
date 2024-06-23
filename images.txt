@@ -27,3 +27,6 @@ goharbor/trivy-adapter-photon:v2.11.0
 busybox
 #jenkins
 jenkinsci/blueocean:1.24.7
+#ingress-nginx
+registry.k8s.io/ingress-nginx/controller:v1.9.1
+registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20230407
