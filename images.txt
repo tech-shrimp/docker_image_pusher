@@ -1,7 +1,7 @@
 nginx
 tomcat
 mysql
-# rook-ceph
+# rook-ceph v1.13.3
 rook/ceph:v1.13.3
 gcr.io/k8s-staging-sig-storage/objectstorage-sidecar/objectstorage-sidecar:v20230130-v0.1.0-24-gc0cf995
 quay.io/ceph/ceph:v18.2.1
@@ -14,6 +14,18 @@ registry.k8s.io/sig-storage/csi-provisioner:v3.6.3
 registry.k8s.io/sig-storage/csi-resizer:v1.9.2
 registry.k8s.io/sig-storage/csi-snapshotter:v6.3.2
 rook/ceph:v1.13.3
+#v1.14.7
+gcr.io/k8s-staging-sig-storage/objectstorage-sidecar/objectstorage-sidecar:v20230130-v0.1.0-24-gc0cf995
+quay.io/ceph/ceph:v18.2.2
+quay.io/ceph/cosi:v0.1.1
+quay.io/cephcsi/cephcsi:v3.11.0
+quay.io/csiaddons/k8s-sidecar:v0.8.0
+registry.k8s.io/sig-storage/csi-attacher:v4.5.1
+registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.10.1
+registry.k8s.io/sig-storage/csi-provisioner:v4.0.1
+registry.k8s.io/sig-storage/csi-resizer:v1.10.1
+registry.k8s.io/sig-storage/csi-snapshotter:v7.0.2
+rook/ceph:v1.14.7
 # harbor
 goharbor/harbor-core:v2.11.0 
 goharbor/harbor-db:v2.11.0
