@@ -36,6 +36,7 @@ goharbor/redis-photon:v2.11.0
 goharbor/registry-photon:v2.11.0
 goharbor/trivy-adapter-photon:v2.11.0
 goharbor/nginx-photon:v2.11.0
+goharbor/harbor-registryctl:v2.11.0
 #测试
 busybox
 #jenkins
