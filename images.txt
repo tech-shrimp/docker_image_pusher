@@ -2,6 +2,7 @@
 calico/cni:master
 calico/node:master
 calico/kube-controllers:master
+calico/typha:master
 #其他
 nginx
 tomcat
