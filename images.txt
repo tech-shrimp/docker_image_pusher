@@ -1,2 +1,3 @@
-m.daocloud.io/registry.k8s.io/metrics-server/metrics-server:v0.6.3
+registry-proxy.onrender.com/mysql:5.7
+
 
