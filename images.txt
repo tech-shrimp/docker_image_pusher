@@ -6,3 +6,6 @@ xhofe/alist:latest
 --platform=linux/arm64 xiaoyaliu/alist
 haroldli/xiaoya-tvbox
 haroldli/xiaoya-tvbox:native
+portainer/portainer
+softethervpn/vpnserver:latest
+enwaiax/x-ui:latest
