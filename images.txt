@@ -1,4 +1,17 @@
-registry-proxy.onrender.com/mysql:5.7
-jenkinsci/blueocean:1.24.7
+registry.cn-hangzhou.aliyuncs.com/shrimp-images/alpine
+centos:7
+gliderlabs/alpine:3.3
+ubuntu:latest
+debian
+oraclejdk
+openjdk
+python
+ruby
+golang
+httpd
+php
+redis
+redis:5.0.8
+
 
 
