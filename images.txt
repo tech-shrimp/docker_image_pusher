@@ -1,5 +1,4 @@
-wurstmeister/zookeeper
-clickhouse-server:v22.1.3.7
+clickhouse-server:v22.13.7
 
 
 
