@@ -1,6 +1,5 @@
 centos:7
 ubuntu:latest
-oraclejdk
 openjdk
 python
 ruby
