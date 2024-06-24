@@ -2,7 +2,6 @@ registry.cn-hangzhou.aliyuncs.com/shrimp-images/alpine
 centos:7
 gliderlabs/alpine:3.3
 ubuntu:latest
-debian
 oraclejdk
 openjdk
 python
