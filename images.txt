@@ -1,3 +1,4 @@
 registry-proxy.onrender.com/mysql:5.7
+jenkinsci/blueocean:1.24.7
 
 
