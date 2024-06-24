@@ -1,4 +1,3 @@
-registry.cn-hangzhou.aliyuncs.com/shrimp-images/alpine
 centos:7
 ubuntu:latest
 oraclejdk
