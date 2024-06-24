@@ -1,13 +1,6 @@
-centos:7
-ubuntu:latest
-openjdk
-python
-ruby
-golang
-httpd
-php
-redis
-redis:5.0.8
+wurstmeister/zookeeper
+wurstmeister/zookeeper:3.4.13
+clickhouse-server:v22.1.3.7
 
 
 
