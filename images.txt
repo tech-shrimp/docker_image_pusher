@@ -1,5 +1,4 @@
 wurstmeister/zookeeper
-wurstmeister/zookeeper:3.4.13
 clickhouse-server:v22.1.3.7
 
 
