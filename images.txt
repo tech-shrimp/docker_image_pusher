@@ -1,1 +1,3 @@
+#支持指定架构
+--platform=linux/arm64
 zhaojun1998/zfile:4.1.5
