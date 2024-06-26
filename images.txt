@@ -6,4 +6,3 @@ xhofe/alist:latest
 --platform=linux/arm64 xiaoyaliu/alist
 xhofe/alist
 xiaoyaliu/alist
-ghcr.io/icewhaletech/casaos:0.4.5
