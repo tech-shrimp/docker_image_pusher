@@ -1,7 +1,2 @@
-yandex/clickhouse-server:latest
-yandex/clickhouse-server:21.6.6.51
-yandex/clickhouse-server:22.1.3.7
-debian
-
-
+quay.io/cephcsi/cephcsi:v3.11.0
 
