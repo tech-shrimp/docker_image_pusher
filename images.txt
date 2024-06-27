@@ -1,3 +1,1 @@
---platform=linux/amd64 java:8u111-jdk-alpine
---platform=linux/amd64 java:7u121-jdk-alpine
---platform=linux/amd64 java:9-jdk
+--platform=linux/amd64 ringcentral/sshpass:latest
