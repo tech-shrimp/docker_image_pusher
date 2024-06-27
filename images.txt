@@ -1,1 +1,1 @@
-shinsenter/phpfpm-nginx
+shinsenter/phpfpm-nginx:php7.4-alpine
