@@ -1,1 +1,1 @@
-onerahmet/openai-whisper-asr-webservice
+shinsenter/phpfpm-nginx
