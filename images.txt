@@ -1,1 +1,1 @@
-shinsenter/phpfpm-nginx:php7.4-alpine
+zhayujie/chatgpt-on-wechat
