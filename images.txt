@@ -13,3 +13,4 @@ registry
 hello-world
 golang
 baiyuetribe/baiduyunpan
+dockurr/windows
