@@ -6,5 +6,5 @@ xhofe/alist:latest
 --platform=linux/arm64 xiaoyaliu/alist
 --platform=linux/arm64 homeassistant/home-assistant:latest
 arm64v8/ubuntu:latest
---platform=linux/arm64 AdguardTeam/AdGuardHome
---platform=linux/arm64 jellyfin/jellyfin
+--platform=linux/arm64 AdguardTeam/AdGuardHome:latest
+--platform=linux/arm64 jellyfin/jellyfin:latest
