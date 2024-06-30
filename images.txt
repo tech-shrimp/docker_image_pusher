@@ -1,3 +1,4 @@
 alpin
+docker
 --platform=nyanmisaka/jellyfin
---platform=xiaoya-tvbox:latest
+xiaoya-tvbox:latest
