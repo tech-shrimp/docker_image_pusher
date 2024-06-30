@@ -1,2 +1,2 @@
 nginx
-nyanmisaka/jellyfin
+ --platform=nyanmisaka/jellyfin
