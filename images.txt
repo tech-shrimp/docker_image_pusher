@@ -14,3 +14,5 @@ registry.cn-shenzhen.aliyuncs.com/hserver/hp-pro:latest-arm64
 #1panel
 1panel/openresty:1.21.4.3-3-2-focal
 cloudreve/cloudreve:latest
+#服务器工具
+registry.k8s.io/kube-apiserver:v1.30.0
