@@ -1,5 +1,7 @@
 jeessy/ddns-go
 gdy666/lucky
+rustdesk/rustdesk-server
+wiznote/wizserver
 nginx
 m.daocloud.io/docker.io/moelin/1panel:latest
 #支持私库
