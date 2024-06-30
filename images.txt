@@ -1,3 +1,3 @@
-nginx
- --platform=nyanmisaka/jellyfin
+alpin
+--platform=nyanmisaka/jellyfin
 --platform=xiaoya-tvbox:latest
