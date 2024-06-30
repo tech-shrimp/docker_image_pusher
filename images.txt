@@ -1,2 +1,3 @@
 nginx
  --platform=nyanmisaka/jellyfin
+--platform=xiaoya-tvbox:latest
