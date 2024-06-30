@@ -1,2 +1,2 @@
-snowdreamtech/frpc:0.58.1
-snowdreamtech/frps:0.58.1
+dannicool/docker-wechatbot-webhook:windows
+dannicool/docker-wechatbot-webhook:latest
