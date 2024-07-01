@@ -1,2 +1,2 @@
-xhofe/alist
-johnshine/baidunetdisk-crossover-vnc
+xhofe/alist:latest
+johnshine/baidunetdisk-crossover-vnc:latest
