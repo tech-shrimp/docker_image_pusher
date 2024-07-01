@@ -1,2 +1,1 @@
-xhofe/alist:latest
-johnshine/baidunetdisk-crossover-vnc:latest
+xiaoyaliu/alist:latest
