@@ -1,2 +1,2 @@
-dannicool/docker-wechatbot-webhook:windows
-dannicool/docker-wechatbot-webhook:latest
+gdy666/lucky:2.10.5
+homeassistant/home-assistant:2024.6
