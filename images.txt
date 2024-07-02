@@ -1,2 +1,2 @@
-gitlab/gitlab-ce:15.8.5-ce.0
+sonatype/nexus3:3.69.0-java11
 
