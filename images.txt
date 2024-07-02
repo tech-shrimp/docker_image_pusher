@@ -1,1 +1,4 @@
 xiaoyaliu/alist:latest
+alibo/shadowrocket-docker:latest
+cnk3x/xunlei:latest
+homeassistant/home-assistant:latest
