@@ -1,1 +1,1 @@
-phalanetwork/prb:git-current-v2
+python:3.11.0
