@@ -8,5 +8,5 @@ docker.io/bats/bats:1.11.0
 docker.io/jenkins/jenkins
 jenkins/inbound-agent:3256.v88a_f6e922152-1
 python:3
-
+docker.io/jenkins/jenkins:2.245.2
 
