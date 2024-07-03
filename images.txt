@@ -16,3 +16,4 @@ nginx
 bitnami/minio:latest
 redis
 consul:1.15.4
+gcr.io/etcd-development/etcd:v3.4.33
