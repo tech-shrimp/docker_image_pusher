@@ -1,2 +1,1 @@
-superng6/qbittorrentee:latest
-containrrr/watchtower:latest
+cloudnas/clouddrive2:latest
