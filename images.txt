@@ -1,5 +1,12 @@
 #quay.io/cephcsi/cephcsi:v3.11.0
-jenkinsci/blueocean:1.27.13
+#jenkinsci/blueocean:1.27.13
 #jenkinsci/blueocean:1.24.8
 #registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
+docker.io/kiwigrid/k8s-sidecar:1.27.4
+jenkins/jnlp-agent-maven:latest
+docker.io/bats/bats:1.11.0
+docker.io/jenkins/jenkins
+jenkins/inbound-agent:3256.v88a_f6e922152-1
+python:3
+
 
