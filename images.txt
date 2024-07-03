@@ -14,3 +14,4 @@ jenkins/ssh-agent:latest-jdk17
 almalinux:9.4
 nginx
 bitnami/minio:latest
+redis
