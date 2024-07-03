@@ -1,1 +1,1 @@
-haishanh/yacd:latest
+emby/embyserver:latest
