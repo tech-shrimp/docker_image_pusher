@@ -1,2 +1,2 @@
-linuxserver/qbittorent:latest
+superng6/qbittorrentee:latest
 containrrr/watchtower:latest
