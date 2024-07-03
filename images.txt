@@ -1,1 +1,1 @@
-xiaoyaliu/glue:latest
+dreamacro/clash:latest
