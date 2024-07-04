@@ -1,4 +1,4 @@
 #支持私库
 b3log/siyuan:latest
 #支持指定架构
---platform=linux/amd64 xiaoyaliu/alist
+#--platform=linux/amd64 xiaoyaliu/alist
