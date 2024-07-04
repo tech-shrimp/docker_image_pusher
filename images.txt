@@ -22,3 +22,4 @@ graylog/graylog:5.2
 elastic/filebeat
 elastic/kibana
 elastic/elasticsearch
+graylog/graylog:6.0.4
