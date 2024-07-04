@@ -17,3 +17,8 @@ bitnami/minio:latest
 redis
 consul:1.15.4
 gcr.io/etcd-development/etcd:v3.4.33
+mongo:5.0
+graylog/graylog:5.2
+elastic/filebeat
+elastic/kibana
+elastic/elasticsearch
