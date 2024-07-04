@@ -36,7 +36,8 @@ yandex/clickhouse-server:21.6.6.51
 yandex/clickhouse-server:22.1.3.7
 debian
 m.daocloud.io/registry.k8s.io/metrics-server/metrics-server:v0.6.3
-registry-proxy.onrender.com/mysql:5.7
+mysql:5.7
+mysql:8.4
 jenkinsci/blueocean:1.24.7
 # rook-ceph v1.13.3
 rook/ceph:v1.13.3
