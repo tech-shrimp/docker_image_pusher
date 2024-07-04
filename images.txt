@@ -85,6 +85,6 @@
 #docker.io/kiwigrid/k8s-sidecar:1.27.4
 #docker.io/jenkins/jenkins:2.452.2-jdk17
 #jenkinsci/blueocean:latest
-jenkinsci/blueocean:2.12.8
+jenkinsci/blueocean:1.27.7
 
 
