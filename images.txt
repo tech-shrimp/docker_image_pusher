@@ -83,6 +83,8 @@
 #registry.k8s.io/ingress-nginx/controller:v1.9.1
 #registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20230407
 #docker.io/kiwigrid/k8s-sidecar:1.27.4
-docker.io/jenkins/jenkins:2.452.2-jdk17
+#docker.io/jenkins/jenkins:2.452.2-jdk17
+jenkinsci/blueocean:1.27.4
+jenkinsci/blueocean:latest
 
 
