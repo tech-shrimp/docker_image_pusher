@@ -19,3 +19,4 @@ ghcr.io/owo-network/deeplx
 teamspeak
 hectorqin/reader
 snowdreamtech/frps
+gitlab/gitlab-ce
