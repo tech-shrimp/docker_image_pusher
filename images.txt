@@ -87,6 +87,6 @@
 #jenkinsci/blueocean:latest
 #jenkinsci/blueocean:1.25.7
 #docker.io/kiwigrid/k8s-sidecar:1.27.4
-blueocean:1.27.13
+alpine
 
 
