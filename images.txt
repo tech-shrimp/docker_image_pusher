@@ -2,6 +2,7 @@ nginx
 mysql:5.7
 openjdk:8
 openjdk:8-jdk-alpine
+openjdk:11-jdk-slim
 redis
 nacos/nacos-server
 portainer/portainer
