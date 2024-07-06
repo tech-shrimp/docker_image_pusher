@@ -20,4 +20,5 @@
 #hectorqin/reader
 #snowdreamtech/frps
 #gitlab/gitlab-ce
-gitlab/gitlab-runner
+#gitlab/gitlab-runner
+anapsix/alpine-java:8_server-jre_unlimited
