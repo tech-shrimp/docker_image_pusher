@@ -24,3 +24,5 @@ elastic/kibana
 elastic/elasticsearch
 graylog/graylog:6.0.4
 mongo:6.0.14
+opensearchproject/opensearch:2.12.0
+graylog/graylog-enterprise:6.0
