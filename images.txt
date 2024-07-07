@@ -1,4 +1,5 @@
-jenkins/inbound-agent:3256.v88a_f6e922152-1
+docker.io/bats/bats:1.11.0
+#jenkins/inbound-agent:3256.v88a_f6e922152-1
 #docker.io/jenkins/jenkins:2.346.3-jdk8
 #jenkinsci/blueocean
 #jenkins/jenkins:2.369
