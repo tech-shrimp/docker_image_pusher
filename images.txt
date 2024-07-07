@@ -1,5 +1,4 @@
-registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-docker:20.10.2
-registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-all:v1.0
+#registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-docker:20.10.2
 registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-kubectl:1.21.1
 registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-nodejs:14.16.1
 registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-maven:3.6.3
