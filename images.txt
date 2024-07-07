@@ -1,4 +1,9 @@
-docker.io/docker
+registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-docker:20.10.2
+registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-all:v1.0
+registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-kubectl:1.21.1
+registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-nodejs:14.16.1
+registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-maven:3.6.3
+#docker.io/docker
 #docker.io/docker:20.10.2
 #docker.io/twalter/smee-client:1.0.2
 #docker.io/bats/bats:1.11.0
