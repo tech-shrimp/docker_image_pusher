@@ -1,4 +1,5 @@
-jenkinsci/blueocean:1.25.8
+jenkins/jenkins:2.369
+#jenkinsci/blueocean:1.25.8
 #quay.io/cephcsi/cephcsi:v3.11.0
 #jenkinsci/blueocean:1.24.8
 #registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
