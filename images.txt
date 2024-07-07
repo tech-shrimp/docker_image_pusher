@@ -1,4 +1,4 @@
-jenkins/jnlp-agent-maven:3.6.3
+docker.io/jenkins/jnlp-agent-maven:3.6.3
 #docker.io/jenkins/jenkins:2.346.3-jdk8
 #jenkinsci/blueocean
 #jenkins/jenkins:2.369
