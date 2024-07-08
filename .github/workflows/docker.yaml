@@ -155,3 +155,14 @@ jobs:
             echo "=============================================================================="     
             
         done < images.txt
+    - name: Bark-Push
+      uses: harryzcy/action-bark@v2.0.2
+      with:
+          status: ${{ job.status }}
+          # on_status: failure, cancelled # only run on these status
+          title: 阿里云Docker镜像推送通知
+          body: "镜像推送状态：${{ job.status }}"
+          device_key: ${{ secrets.BARK_DEVICE_KEY }}
+          level: passive # iOS notification level 'active', 'timeSensitive' or 'passive', default to 'active'
+          bark_server_url: ${{ secrets.BARK_SERVER_URL }}
+      if: always() # Pick up events even if the job fails or is canceled.
