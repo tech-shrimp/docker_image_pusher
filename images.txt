@@ -8,4 +8,4 @@
 # ------- list -----
 dreamacro/clash:v1.18.0
 dreamacro/clash-premium:latest
-headscale/headscale:0.22.2
+headscale/headscale:0.22.3
