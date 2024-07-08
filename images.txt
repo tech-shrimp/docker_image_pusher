@@ -22,4 +22,5 @@
 #gitlab/gitlab-ce
 #gitlab/gitlab-runner
 #anapsix/alpine-java:8_server-jre_unlimited
-rabbitmq:3.13.3-management-alpine
+#rabbitmq:3.13.3-management-alpine
+nginx
