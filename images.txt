@@ -1,2 +1,2 @@
---platform=linux/amd64 mritd/tpclash:2024-07-02-10-14-56
---platform=linux/arm64 mritd/tpclash:2024-07-02-10-14-56
+--platform=linux/amd64 daeuniverse/dae:20240618
+--platform=linux/arm64 daeuniverse/dae:20240618
