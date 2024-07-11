@@ -1,5 +1,7 @@
-docker.elastic.co/eck/eck-operator:1.6.0
-docker.elastic.co/eck/eck-operator:2.13.0
+docker.elastic.co/elasticsearch/elasticsearch:8.14.3
+docker.elastic.co/elasticsearch/elasticsearch:7.13.1
+#docker.elastic.co/eck/eck-operator:1.6.0
+#docker.elastic.co/eck/eck-operator:2.13.0
 #jenkins/jnlp-slave:4.13.3-1-jdk11
 #gitlab/gitlab-ce:latest
 #centos:7.6.1810
