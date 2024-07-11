@@ -1,4 +1,6 @@
-jenkins/jnlp-slave:4.13.3-1-jdk11
+docker.elastic.co/eck/eck-operator:1.6.0
+docker.elastic.co/eck/eck-operator:2.13.0
+#jenkins/jnlp-slave:4.13.3-1-jdk11
 #gitlab/gitlab-ce:latest
 #centos:7.6.1810
 #openjdk:8-jre-alpine
