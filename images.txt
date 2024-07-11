@@ -1,5 +1,7 @@
-openjdk:8-jre-alpine
-jenkins/inbound-agent:3256.v88a_f6e922152-1
+gitlab/gitlab-ce:latest
+centos:7.6.1810
+#openjdk:8-jre-alpine
+#jenkins/inbound-agent:3256.v88a_f6e922152-1
 #registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-docker:20.10.2
 #registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-kubectl:1.21.1
 #registry.cn-hangzhou.aliyuncs.com/lfy_k8s_images/jnlp-nodejs:14.16.1
