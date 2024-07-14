@@ -1,8 +1,9 @@
-redis:7.0.12
-mongo:5.0.5
-mysql:8.0.33
-redis:5.0.9
-nginx:1.24
+docker.io/library/busybox:1.28
+#redis:7.0.12
+#mongo:5.0.5
+#mysql:8.0.33
+#redis:5.0.9
+#nginx:1.24
 #docker.elastic.co/elasticsearch/elasticsearch:7.17.2
 #docker.elastic.co/kibana/kibana:7.17.2
 #docker.elastic.co/logstash/logstash:7.17.2
