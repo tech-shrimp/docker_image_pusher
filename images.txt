@@ -5,4 +5,4 @@ xhofe/alist:latest
 #支持指定架构
 --platform=linux/arm64 xiaoyaliu/alist
 rockylinux:8
-homeassistant/home-assistant:2023.3.3
+--platform=linux/armv7 homeassistant/home-assistant:2023.3.3
