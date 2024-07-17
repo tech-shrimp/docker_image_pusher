@@ -1,7 +1,11 @@
-registry.cn-hangzhou.aliyuncs.com/chenby/coredns:v1.10.0
-registry.k8s.io/coredns/coredns:v1.11.1
-registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:v1.11.1
-docker.io/library/busybox:1.28.3
+docker.io/calico/kube-controllers:v3.27.3
+docker.io/calico/node:v3.27.3
+docker.io/calico/pod2daemon-flexvol:v3.27.3
+docker.io/calico/cni:v3.27.3
+#registry.cn-hangzhou.aliyuncs.com/chenby/coredns:v1.10.0
+#registry.k8s.io/coredns/coredns:v1.11.1
+#registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:v1.11.1
+#docker.io/library/busybox:1.28.3
 #docker.io/library/busybox:1.28
 #redis:7.0.12
 #mongo:5.0.5
