@@ -1,3 +1,4 @@
 node:20-alpine
 
 binaryify/netease_cloud_music_api
+mekayelanik/ispyagentdvr:latest
