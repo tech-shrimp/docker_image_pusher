@@ -16,3 +16,5 @@ registry.cn-shenzhen.aliyuncs.com/hserver/hp-pro:latest-arm64
 cloudreve/cloudreve:latest
 #服务器工具
 #registry.k8s.io/kube-apiserver
+#其它项目
+yidadaa/chatgpt-next-web
