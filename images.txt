@@ -10,4 +10,4 @@ dokcer
 maven
 --platform=linux/amd64 redis:7.0.15-alpine3.20
 --platform=linux/arm/v7 redis:7.0.15-alpine3.20
-docker pull jc21/nginx-proxy-manager:latest
+jc21/nginx-proxy-manager:latest
