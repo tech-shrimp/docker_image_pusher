@@ -1,6 +1,24 @@
 nginx
 #支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
+#k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+#xhofe/alist:latest
+louislam/uptime-kuma
+elestio/uptime-kuma:1.23.13
+bitnami/mysql:8.4.1
+phpmyadmin:5.2.1-apache
+mariadb:11.2.4
+percona:ps-8.0.36-28
+mysql:9.0.0
+mysql:8.4.1
+mysql:8.0.38
+mysql:5.7.43
+redis:7.2.5
+redis:6.2
+postgres:12.19
+bitnami/postgresql:16.3.0
+bitnami/postgresql:12.19.0
+bitnami/postgresql:15.7.0
+
+
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+#--platform=linux/arm64 xiaoyaliu/alist
