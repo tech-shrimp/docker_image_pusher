@@ -9,3 +9,4 @@ haroldli/xiaoya-tvbox:native
 portainer/portainer
 softethervpn/vpnserver:latest
 enwaiax/x-ui:latest
+btpanel/baota
