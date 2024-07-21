@@ -4,3 +4,18 @@ k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 xhofe/alist:latest
 #支持指定架构
 --platform=linux/arm64 xiaoyaliu/alist
+xhofe/alist
+xiaoyaliu/alist
+#hppro穿透镜像
+registry.cn-shenzhen.aliyuncs.com/hserver/hp-pro:java
+registry.cn-shenzhen.aliyuncs.com/hserver/hp-pro:java-arm64
+registry.cn-shenzhen.aliyuncs.com/hserver/hp-pro:latest
+registry.cn-shenzhen.aliyuncs.com/hserver/hp-pro:latest-arm64
+#1panel
+#1panel/openresty:1.21.4.3-3-3-focal
+1panel/openresty
+cloudreve/cloudreve:latest
+#服务器工具
+#registry.k8s.io/kube-apiserver
+#其它项目
+yidadaa/chatgpt-next-web
