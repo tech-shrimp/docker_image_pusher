@@ -1,6 +1,6 @@
-nginx
-#支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
-#支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:v0.7.0
+registry.cn-hangzhou.aliyuncs.com/fastgpt/mongo:5.0.18
+registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-sandbox:v4.8.8
+registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.8
+mysql:8.0.36
+ghcr.io/songquanpeng/one-api:latest
