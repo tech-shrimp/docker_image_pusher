@@ -9,3 +9,4 @@
 dreamacro/clash:v1.18.0
 dreamacro/clash-premium:latest
 headscale/headscale:0.22.3
+gdy666/lucky:2.10.9
