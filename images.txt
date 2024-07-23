@@ -1,1 +1,1 @@
-docker.getcollate.io/openmetadata/server:1.4.3
+docker.getcollate.io/openmetadata/ingestion:1.4.3
