@@ -6,6 +6,7 @@ openjdk:11-jdk-slim
 redis
 nacos/nacos-server
 portainer/portainer
+maven:3.8.4-jdk-8
 #支持私库
 # k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 # xhofe/alist:latest
