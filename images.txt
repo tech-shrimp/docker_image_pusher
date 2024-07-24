@@ -1,5 +1,5 @@
-mobz/elasticsearch-head:4
 mobz/elasticsearch-head:latest
+mobz/elasticsearch-head:4
 #mobz/elasticsearch-head:5
 #registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20230407@sha256:543c40fd093964bc9ab509d3e791f9989963021f1e9e4c9c7b6700b02bfb227b
 #registry.k8s.io/ingress-nginx/controller:v1.8.0@sha256:744ae2afd433a395eeb13dc03d3313facba92e96ad71d9feaafc85925493fee3
