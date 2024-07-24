@@ -1,1 +1,4 @@
-continuumio/anaconda3:latest
+nginx:1.23.4
+mysql:8.0.33
+redis:6.2.12
+minio/minio:RELEASE.2023-04-13T03-08-07Z
