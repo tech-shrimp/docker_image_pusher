@@ -1,1 +1,1 @@
-jc21/nginx-proxy-manager
+rabbitmq:3.8-management
