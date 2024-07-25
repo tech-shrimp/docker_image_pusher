@@ -7,4 +7,4 @@ xhofe/alist:latest
 --platform=linux/arm64 homeassistant/home-assistant:latest
 arm64v8/ubuntu:latest
 --platform=linux/arm64 code-server:latest
-gitlab:latest
+gitlab/gitlab-ce:latest
