@@ -6,5 +6,4 @@ xhofe/alist:latest
 --platform=linux/arm64 xiaoyaliu/alist
 --platform=linux/arm64 homeassistant/home-assistant:latest
 arm64v8/ubuntu:latest
---platform=linux/arm64 code-server:latest
---platform=linux/arm64 gitlab-ce:latest
+--platform=linux/arm64 gitlab/gitlab-ce:latest
