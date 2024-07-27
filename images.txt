@@ -1,3 +1,4 @@
+maxkb
 nginx
 alpine
 busybox
