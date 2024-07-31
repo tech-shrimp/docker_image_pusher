@@ -1,4 +1,4 @@
-sameersbn/gitlab:12.1.6
+redis:7.0.11-alpine
 #支持私库
 #k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 #xhofe/alist:latest
