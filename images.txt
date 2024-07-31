@@ -5,3 +5,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 nginx:1.27.0
+bitnami/redis-sentinel:5.0.14-debian-10-r170
