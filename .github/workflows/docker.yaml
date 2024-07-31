@@ -117,7 +117,7 @@ jobs:
             if [ -z "$platform" ]; then
                 platform_prefix=""
             else
-                platform_prefix="${platform//\//_}_"
+                platform_prefix="${platform//\//_}_"    # platform 中所有/替换为_
             fi
             echo "platform_prefix is $platform_prefix"
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
