@@ -90,7 +90,8 @@ jobs:
             # 如果镜像存在于数组中，则添加temp_map
             if [[ -n "${temp_map[$image_name]}" ]]; then
                  # 如果temp_map已经存在镜像名，判断是不是同一命名空间
-                 if [[ "${temp_map[$image_name]}" != $name_space  ]]; then
+                 #if [[ "${temp_map[$image_name]}" != $name_space  ]]; then
+                 if [[ "${temp_map[$image_name]}" == $name_space  ]]; then
                     echo "duplicate image name: $image_name"
                     duplicate_images[$image_name]="true"
                  fi
