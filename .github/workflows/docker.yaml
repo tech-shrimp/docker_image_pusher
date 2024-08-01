@@ -7,10 +7,10 @@ on:
 
 
 env:
-  ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
-  ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
-  ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
-  ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
+  ALIYUN_REGISTRY: "${{ registry.cn-hangzhou.aliyuncs.com }}"
+  ALIYUN_NAME_SPACE: "${{ images-wzh }}"
+  ALIYUN_REGISTRY_USER: "${{ aliyun7035281672 }}"
+  ALIYUN_REGISTRY_PASSWORD: "${{ wzh.2005 }}"
 
 jobs:
 
