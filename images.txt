@@ -1,1 +1,1 @@
-easysoft/zentao:20.2.0
+mysql:5.7.38
