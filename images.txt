@@ -1,6 +1,21 @@
-nginx
-#支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
-#支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+langgenius/dify-api:0.6.14
+langgenius/dify-api:0.6.14
+langgenius/dify-web:0.6.14
+postgres:15-alpine
+redis:6-alpine
+langgenius/dify-sandbox:0.2.1
+ubuntu/squid:latest
+nginx:latest
+semitechnologies/weaviate:1.19.0
+langgenius/qdrant:v1.7.3
+pgvector/pgvector:pg16
+tensorchord/pgvecto-rs:pg16-v0.2.0
+ghcr.io/chroma-core/chroma:0.5.1
+container-registry.oracle.com/database/free:latest
+quay.io/coreos/etcd:v3.5.5
+minio/minio:RELEASE.2023-03-20T20-16-18Z
+milvusdb/milvus:v2.3.1
+opensearchproject/opensearch:latest
+opensearchproject/opensearch-dashboards:latest
+myscale/myscaledb:1.6
+
