@@ -1,61 +1,9 @@
-# API service
-langgenius/dify-api:0.6.15
 
-# worker service
-langgenius/dify-api:0.6.15
+# ollama
+ollama/ollama:latest
 
-# Frontend web application
-langgenius/dify-web:0.6.15
+# xinference - CPU
+xprobe/xinference:latest-cpu
 
-# The postgres database.
-postgres:15-alpine
-
-# The redis cache.
-redis:6-alpine
-
-# The DifySandbox
-langgenius/dify-sandbox:0.2.1
-
-# ssrf_proxy server
-ubuntu/squid:latest
-
-# Certbot service
-certbot/certbot
-
-# The nginx reverse proxy.
-nginx:latest
-
-# The Weaviate vector store.
-semitechnologies/weaviate:1.19.0
-
-# Qdrant vector store.
-langgenius/qdrant:v1.7.3
-
-# The pgvector vector database.
-pgvector/pgvector:pg16
-
-# pgvecto-rs vector store
-tensorchord/pgvecto-rs:pg16-v0.2.0
-
-# Chroma vector database
-ghcr.io/chroma-core/chroma:0.5.1
-
-# Oracle vector database
-container-registry.oracle.com/database/free:latest
-
-# Milvus vector database services
-quay.io/coreos/etcd:v3.5.5
-minio/minio:RELEASE.2023-03-20T20-16-18Z
-milvusdb/milvus:v2.3.1
-
-# Opensearch vector database
-opensearchproject/opensearch:latest
-opensearchproject/opensearch-dashboards:latest
-
-# MyScale vector database
-myscale/myscaledb:1.6
-
-# unstructured
-downloads.unstructured.io/unstructured-io/unstructured-api:latest
-
-
+# xinference
+xprobe/xinference:latest
