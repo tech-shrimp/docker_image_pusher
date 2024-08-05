@@ -1,1 +1,1 @@
-deluan/navidrome:0.52.5
+xhongc/music_tag_web:2.1.7
