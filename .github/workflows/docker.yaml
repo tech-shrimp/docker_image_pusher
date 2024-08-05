@@ -57,6 +57,7 @@ jobs:
 
     - name: Build and push image Aliyun
       run: |
+        echo "docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY"
         docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
@@ -77,7 +78,8 @@ jobs:
             image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
             echo "image_name_tag $image_name_tag"
             # 获取命名空间 例如kasmweb,  这里有种特殊情况 docker.io/nginx，把docker.io当成命名空间，也OK
-            name_space=$(echo "$image" | awk -F'/' '{if (NF==3) print $2; else if (NF==2) print $1; else print ""}')
+            #name_space=$(echo "$image" | awk -F'/' '{if (NF==3) print $2; else if (NF==2) print $1; else print ""}')
+            name_space=$(echo "$image" | awk -F'/' '{if(NF==3||NF==2) print $(NF-1);  else print ""}')
             echo "name_space: $name_space"
             # 这里不要是空值影响判断
             name_space="${name_space}_"
@@ -87,7 +89,7 @@ jobs:
             
             # 如果镜像存在于数组中，则添加temp_map
             if [[ -n "${temp_map[$image_name]}" ]]; then
-                 # 如果temp_map已经存在镜像名，判断是不是同一命名空间
+                 # 如果temp_map已经存在镜像名，判断是不是同一命名空间 （不同命名空间，同镜像名的情况）
                  if [[ "${temp_map[$image_name]}" != $name_space  ]]; then
                     echo "duplicate image name: $image_name"
                     duplicate_images[$image_name]="true"
@@ -114,7 +116,7 @@ jobs:
             if [ -z "$platform" ]; then
                 platform_prefix=""
             else
-                platform_prefix="${platform//\//_}_"
+                platform_prefix="${platform//\//_}_"    # platform 中所有/替换为_
             fi
             echo "platform_prefix is $platform_prefix"
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
@@ -123,7 +125,7 @@ jobs:
             # 获取 镜像名:版本号  例如nginx:1.25.3
             image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
             # 获取命名空间 例如kasmweb  这里有种特殊情况 docker.io/nginx，把docker.io当成命名空间，也OK
-            name_space=$(echo "$image" | awk -F'/' '{if (NF==3) print $2; else if (NF==2) print $1; else print ""}')
+            name_space=$(echo "$image" | awk -F'/' '{if(NF==3||NF==2) print $(NF-1);  else print ""}')
             # 获取镜像名例  例如nginx
             image_name=$(echo "$image_name_tag" | awk -F':' '{print $1}')
         
