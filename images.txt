@@ -1,1 +1,1 @@
-mysql:5.7.38
+deluan/navidrome:0.52.5
