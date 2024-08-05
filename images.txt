@@ -1,7 +1,9 @@
-docker.elastic.co/logstash/logstash:7.10.0
-docker.elastic.co/beats/filebeat:7.10.0
-docker.elastic.co/kibana/kibana:7.10.0
-docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+docker.elastic.co/logstash/logstash:8.9.1
+docker.elastic.co/beats/filebeat:8.9.1
+#docker.elastic.co/logstash/logstash:7.10.0
+#docker.elastic.co/beats/filebeat:7.10.0
+#docker.elastic.co/kibana/kibana:7.10.0
+#docker.elastic.co/elasticsearch/elasticsearch:7.10.0
 #wcjiang/reference:latest
 #docker.elastic.co/kibana/kibana:8.9.1
 #docker.elastic.co/elasticsearch/elasticsearch:8.9.1
