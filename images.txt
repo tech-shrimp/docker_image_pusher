@@ -1,6 +1,8 @@
-quay.io/k8scsi/csi-node-driver-registrar:v1.2.0
-cr.yandex/crp9ftr22d26age3hulg/csi-s3:0.41.1
-quay.io/k8scsi/csi-provisioner:v2.1.0
+goharbor/harbor-jobservice:dev
+goharbor/notary-server-photon:dev
+#quay.io/k8scsi/csi-node-driver-registrar:v1.2.0
+#cr.yandex/crp9ftr22d26age3hulg/csi-s3:0.41.1
+#quay.io/k8scsi/csi-provisioner:v2.1.0
 
 
 #quay.io/argoproj/argocd:v2.7.1
