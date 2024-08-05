@@ -1,5 +1,9 @@
-docker.elastic.co/logstash/logstash:8.9.1
-docker.elastic.co/beats/filebeat:8.9.1
+docker.elastic.co/logstash/logstash:7.12.1
+docker.elastic.co/beats/filebeat:7.12.1
+docker.elastic.co/logstash/logstash:8.14.3
+docker.elastic.co/beats/filebeat:8.14.3
+#docker.elastic.co/logstash/logstash:8.9.1
+#docker.elastic.co/beats/filebeat:8.9.1
 #docker.elastic.co/logstash/logstash:7.10.0
 #docker.elastic.co/beats/filebeat:7.10.0
 #docker.elastic.co/kibana/kibana:7.10.0
