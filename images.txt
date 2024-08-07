@@ -1,6 +1,7 @@
-nginx
-#支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
-#支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+quay.io/jetstack/cert-manager-cainjector:v1.7.1
+quay.io/jetstack/cert-manager-ctl:v1.7.1
+quay.io/jetstack/cert-manager-controller:v1.7.1
+nacos/nacos-server:2.0.3
+redis:6.2
+seataio/seata-server:1.4.2
+bladex/sentinel-dashboard:1.8.0
