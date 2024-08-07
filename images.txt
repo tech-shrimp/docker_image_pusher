@@ -1,1 +1,1 @@
-nginx/nginx-ingress:1.11.0
+quay.io/jetstack/cert-manager-webhook:v1.7.1
