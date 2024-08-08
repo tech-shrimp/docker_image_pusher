@@ -1,4 +1,4 @@
-maxkb
+ghcr.io/liteldev/levilamina-server:0.5.0-wine
 nginx
 alpine
 busybox
