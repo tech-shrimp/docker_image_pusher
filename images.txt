@@ -1,6 +1,48 @@
-nginx
 #支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
+# k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+# xhofe/alist:latest
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+# --platform=linux/arm64 xiaoyaliu/alist
+--platform=linux/arm64/v8 mysql:8.4.3
+--platform=linux/amd64    mysql:8.4.3
+
+--platform=linux/arm64/v8 postgres:15.8
+--platform=linux/amd64    postgres:15.8
+--platform=linux/arm64    oceanbase/oceanbase-ce:4.2.1
+--platform=linux/amd64    oceanbase/oceanbase-ce:4.2.1
+
+--platform=linux/arm64/v8 redis:6.2.7
+--platform=linux/amd64    redis:6.2.7
+--platform=linux/arm64    rabbitmq:3.13.3-management
+--platform=linux/amd64    rabbitmq:3.13.3-management
+--platform=linux/arm64    bitnami/kafka
+--platform=linux/amd64    bitnami/kafka
+
+--platform=linux/arm64    minio/minio
+--platform=linux/amd64    minio/minio
+
+--platform=linux/arm64/v8 mongo:4.2.5
+--platform=linux/amd64    mongo:4.2.5
+--platform=linux/arm64    yapipro/yapi
+--platform=linux/amd64    yapipro/yapi
+
+--platform=linux/arm64/v8 nginx:1.27.2
+--platform=linux/amd64    nginx:1.27.2
+
+--platform=linux/arm64/v8 elasticsearch:7.16.3
+--platform=linux/amd64    elasticsearch:7.8.0
+--platform=linux/arm64/v8 kibana:7.16.3
+--platform=linux/amd64    kibana:7.8.0
+--platform=linux/arm64/v8 logstash:7.16.3
+--platform=linux/amd64    logstash:7.8.0
+
+--platform=linux/arm64/v8 zookeeper:3.9.2
+--platform=linux/amd64    zookeeper:3.9.2
+--platform=linux/arm64    nacos/nacos-server:v2.4.3
+--platform=linux/amd64    nacos/nacos-server:v1.4.8
+
+
+--platform=linux/arm64    openzipkin/zipkin
+--platform=linux/amd64    openzipkin/zipkin
+--platform=linux/arm64    bladex/sentinel-dashboard
+--platform=linux/amd64    bladex/sentinel-dashboard
