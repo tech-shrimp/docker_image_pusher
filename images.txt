@@ -1,4 +1,83 @@
-nginx
+# quay.io/coreos/etcd:v3.5.5
+# minio/minio:RELEASE.2023-03-20T20-16-18Z
+# milvusdb/milvus:v2.3.1
+# zilliz/attu:v2.3.1
+# python:3.11-slim
+# python:3.10.12-slim
+# node:20.11.1
+# nginx:1.27.4-alpine
+# langchain/langchain:latest
+# openjdk:17-jdk-slim
+# node:20.11.1-slim
+# debian:bookworm
+
+# codetrans镜像
+#opea/codetrans:1.3
+#opea/vllm:1.3
+#opea/llm-textgen:1.3
+#opea/nginx:1.3
+#vllm/vllm-openai:v0.8.3
+#opea/codetrans-ui:1.3
+
+
+#ghcr.io/huggingface/text-generation-inference:2.4.0-intel-cpu
+#postgres:latest
+#opea/text2sql:latest
+#opea/text2sql-react-ui:latest
+#nginx:alpine
+
+#ghcr.io/huggingface/text-embeddings-inference:cpu-1.6
+#opea/embedding:1.3
+#opea/web-retriever:1.3
+#opea/reranking:1.3
+#opea/llm-textgen:1.3
+#opea/searchqna:1.3
+#opea/searchqna-ui:1.3
+
+#opea/agent:1.3
+#opea/llm-docsum:1.3
+#opea/agent-ui:1.3
+#ghcr.io/huggingface/text-embeddings-inference:cpu-1.5
+#redis/redis-stack:7.2.0-v9
+#opea/dataprep:1.3
+#opea/vllm-gaudi:1.3
+#opea/vllm:1.3
+#searxng/searxng:latest
+#valkey/valkey:8-alpine
+
+
+#OPEA 阿里云使用镜像
+#ghcr.io/huggingface/text-embeddings-inference:cpu-1.5
+#ghcr.io/huggingface/text-generation-inference:2.4.0-intel-cpu
+#intellabs/vdms:v2.8.0
+#mongo:7.0.11
+
+
+#huggingface/python:3.11-esgz
+#opea/text2sql:1.3
+#opea/text2sql-react-ui:1.3
+
+#node:20.19.4
+
+#valkey/valkey:8-alpine
+
+# mysql:8.0.11
+#neo4j
+#redis:8.0.2
+#nginx:1.27.2
+#milvusdb/milvus:v2.5.10
+#quay.io/coreos/etcd:v3.5.18
+#quay.io/minio/minio:RELEASE.2023-12-20T01-00-02Z
+#mysql:8.0.39
+python:3.12.9-slim
+python:3.11-slim
+opea/comps-base:latest
+intellabs/vdms:latest
+opea/visualqna:latest
+opea/visualqna-ui:latest
+opea/nginx:latest
+
+
 #支持私库
 k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 xhofe/alist:latest
