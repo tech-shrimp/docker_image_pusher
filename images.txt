@@ -51,4 +51,5 @@
 #prom/alertmanager:latest
 #wbsu2003/koodo-reader:v6
 #j0k3rsec/readest:0.9.30-amd
-ghcr.io/koodo-reader/koodo-reader:master
+#ghcr.io/koodo-reader/koodo-reader:master
+nvidia/cuda:12.1.0-runtime-ubuntu22.04
