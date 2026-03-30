@@ -1,5 +1,6 @@
-linkease/webvirtcloud:0.8.7
-lettore/webvirtcloud:amd64-latest
+neo4jlabs/neodash:2.4.11
+#linkease/webvirtcloud:0.8.7
+#lettore/webvirtcloud:amd64-latest
 #--platform=linux/amd64  grafana/alloy:latest
 #--platform=linux/amd64 grafana/loki:main-fb58ab8
 #ghcr.io/ajnart/homarr:latest
