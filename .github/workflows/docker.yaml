@@ -3,19 +3,19 @@ name: Docker
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
-
+    branches: [ arm ]
 
 env:
   ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
   ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
   ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
+  WEBHOOK_URL: "${{ secrets.WEBHOOK_URL }}"
+  TARGET_PLATFORM: "linux/arm64"
 
 jobs:
-
   build:
-    name: Pull
+    name: Pull and Push ARM64 Images
     runs-on: ubuntu-latest
     steps:
     - name: Before freeing up disk space
@@ -25,18 +25,13 @@ jobs:
         df -hT
         echo "=============================================================================="
 
-    # 增加可用磁盘空间
     - name: Maximize build space
       uses: easimon/maximize-build-space@master
       with:
-
         root-reserve-mb: 2048
         swap-size-mb: 128
         remove-dotnet: 'true'
         remove-haskell: 'true'
-        # 如果空间还是不够用，可以把以下开启，清理出更多空间
-        # remove-android: 'true'
-        # remove-codeql: 'true'
         build-mount-path: '/var/lib/docker/'
 
     - name: Restart docker
@@ -55,9 +50,12 @@ jobs:
     - name: Docker Setup Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Build and push image Aliyun
+    - name: Log in to Aliyun Registry
       run: |
         docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+
+    - name: Process and push images
+      run: |
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
         declare -A temp_map
@@ -98,7 +96,6 @@ jobs:
             fi       
         done < images.txt
         
-        
         while IFS= read -r line || [ -n "$line" ]; do
             # 忽略空行与注释
             [[ -z "$line" ]] && continue
@@ -106,8 +103,14 @@ jobs:
                 continue
             fi
         
-            echo "docker pull $line"
-            docker pull $line
+            # 获取原始镜像名（例如：nginx:1.27）
+            original_image=$(echo "$line" | awk '{print $NF}')
+            echo "Original image: $original_image"
+
+            # 关键：拉取 ARM64 架构镜像
+            echo "Pulling ARM64 image: $original_image"
+            docker pull --platform $TARGET_PLATFORM $original_image
+
             platform=$(echo "$line" | awk -F'--platform[ =]' '{if (NF>1) print $2}' | awk '{print $1}')
             echo "platform is $platform"
             # 如果存在架构信息 将架构信息拼到镜像名称前面
@@ -117,9 +120,9 @@ jobs:
                 platform_prefix="${platform//\//_}_"
             fi
             echo "platform_prefix is $platform_prefix"
+            
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
             image=$(echo "$line" | awk '{print $NF}')
-
             # 获取 镜像名:版本号  例如nginx:1.25.3
             image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
             # 获取命名空间 例如kasmweb  这里有种特殊情况 docker.io/nginx，把docker.io当成命名空间，也OK
@@ -139,10 +142,16 @@ jobs:
             # 将@sha256:等字符删除
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
-            echo "docker tag $image $new_image"
+            echo "Tagging and pushing ARM64 image to: $new_image"
+            
             docker tag $image $new_image
             echo "docker push $new_image"
             docker push $new_image
+            
+            # 发送 webhook 消息
+            echo "Sending webhook message for $new_image"
+            curl -X POST -H "Content-Type: application/json" -d "{\"msgtype\": \"text\", \"text\":{\"content\":\"镜像推送成功: $new_image\"}}" $WEBHOOK_URL
+            
             echo "开始清理磁盘空间"
             echo "=============================================================================="
             df -hT
