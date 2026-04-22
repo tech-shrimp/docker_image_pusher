@@ -1,1 +1,2 @@
-openjdk:17
+emqx/emqx:5.8.4
+--platform=linux/arm64
