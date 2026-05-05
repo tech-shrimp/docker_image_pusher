@@ -1,6 +1,15 @@
-nginx
-#支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
-#支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+#nginx
+#xhofe/alist:latest
+#支持指定架构1
+#--platform=linux/arm64 xiaoyaliu/alist 
+#jonnyan404/zerotier-moon
+#keynetworks/ztncui
+#yidadaa/chatgpt-next-web
+#openjdk:8-buster 
+#--platform=linux/amd64/v3  nginx:1.20
+#bitnami/kubectl
+#ghcr.io/linuxserver/duplicati
+#1panel-php:7.3.33
+#nginx:1.22
+#mysql:8.0.29
+quay.io/ascend/vllm-ascend:v0.13.0rc3-a3
