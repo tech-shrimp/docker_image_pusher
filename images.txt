@@ -5,9 +5,9 @@ nginx:alpine
 redis:alpine
 mariadb:10.7.3
 dootask/appstore:0.2.6
-#crpi-8mxxyq37t3w9t2kj.cn-hangzhou.personal.cr.aliyuncs.com/stonedtx/stonedt_yuqing:1.0.10
+crpi-8mxxyq37t3w9t2kj.cn-hangzhou.personal.cr.aliyuncs.com/stonedtx/stonedt_yuqing:1.0.10
 learnedmachine/speakr:latest
-#nacos/nacos-server:v2.1.0
+nacos/nacos-server:v2.1.0
 #nacos/nacos-server
 #registry.cn-hangzhou.aliyuncs.com/zhengqing/rabbitmq:3.9.1-management
 #redis:latest
