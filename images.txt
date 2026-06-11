@@ -1,4 +1,8 @@
-neo4jlabs/neodash:2.4.11
+swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/ygqygq2/fastdfs-nginx:V6.11.0-linuxarm64
+swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/clibing/alpine-fastdfs:v5.11-linuxarm64
+onlyonelmm/fastdfs-arm64:latest
+
+#neo4jlabs/neodash:2.4.11
 #linkease/webvirtcloud:0.8.7
 #lettore/webvirtcloud:amd64-latest
 #--platform=linux/amd64  grafana/alloy:latest
