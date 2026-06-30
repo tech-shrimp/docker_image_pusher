@@ -1,6 +1,21 @@
-swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/ygqygq2/fastdfs-nginx:V6.11.0-linuxarm64
-swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/clibing/alpine-fastdfs:v5.11-linuxarm64
-onlyonelmm/fastdfs-arm64:latest
+chrislusf/seaweedfs:4.17_large_disk
+clickhouse-self-hosted-local
+confluentinc/cp-kafka:7.6.6
+edoburu/pgbouncer:v1.25.2-p0
+ghcr.io/getsentry/launchpad:nightly
+ghcr.io/getsentry/relay:nightly
+ghcr.io/getsentry/snuba:nightly
+ghcr.io/getsentry/symbolicator:nightly
+ghcr.io/getsentry/taskbroker:nightly
+ghcr.io/getsentry/uptime-checker:nightly
+ghcr.io/getsentry/vroom:nightly
+memcached:1.6.26-alpine
+nginx:1.31.0-alpine
+postgres:14.23-bookworm
+redis:6.2.20-alpine
+registry.gitlab.com/egos-tech/smtp
+sentry-cleanup-self-hosted-local
+sentry-self-hosted-local
 
 #neo4jlabs/neodash:2.4.11
 #linkease/webvirtcloud:0.8.7
