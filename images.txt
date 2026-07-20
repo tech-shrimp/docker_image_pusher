@@ -1,21 +1,4 @@
-chrislusf/seaweedfs:4.17_large_disk
-clickhouse-self-hosted-local:latest
-confluentinc/cp-kafka:7.6.6
-edoburu/pgbouncer:v1.25.2-p0
-ghcr.io/getsentry/launchpad:nightly
-ghcr.io/getsentry/relay:nightly
-ghcr.io/getsentry/snuba:nightly
-ghcr.io/getsentry/symbolicator:nightly
-ghcr.io/getsentry/taskbroker:nightly
-ghcr.io/getsentry/uptime-checker:nightly
-ghcr.io/getsentry/vroom:nightly
-memcached:1.6.26-alpine
-nginx:1.31.0-alpine
-postgres:14.23-bookworm
-redis:6.2.20-alpine
-registry.gitlab.com/egos-tech/smtp:latest
-sentry-cleanup-self-hosted-local:latest
-sentry-self-hosted-local:latest
+clickhouse/clickhouse-server:26.4-distroless
 
 #neo4jlabs/neodash:2.4.11
 #linkease/webvirtcloud:0.8.7
