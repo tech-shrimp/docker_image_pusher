@@ -1,4 +1,6 @@
 nginx
 redis:6.2.22
+postgresql:16.14
+
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+--platform=linux/amd64
