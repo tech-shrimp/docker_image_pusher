@@ -1,4 +1,5 @@
-clickhouse/clickhouse-server:26.3
+postgres:15-alpine
+#clickhouse/clickhouse-server:26.3
 
 
 #neo4jlabs/neodash:2.4.11
