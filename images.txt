@@ -1,4 +1,4 @@
-python:3.11-slim
+zhangzihan/netback:latest
 #postgres:15-alpine
 #clickhouse/clickhouse-server:26.3
 
