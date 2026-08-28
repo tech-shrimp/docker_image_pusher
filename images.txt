@@ -1,1 +1,1 @@
-neo4j:5.20.0-community
+milvus:v2.6.22
