@@ -1,1 +1,1 @@
-milvus:v2.6.21
+milvus:v2.6.22
