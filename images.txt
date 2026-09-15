@@ -1,6 +1,2 @@
---platform=linux/amd64 kiwigrid/k8s-sidecar:2.8.1
---platform=linux/arm64 kiwigrid/k8s-sidecar:2.8.1
---platform=linux/amd64 victoriametrics/vmauth:v1.150.0
---platform=linux/arm64 victoriametrics/vmauth:v1.150.0
---platform=linux/amd64 victoriametrics/vmauth:v1.148.0
---platform=linux/arm64 victoriametrics/vmauth:v1.148.0
+--platform=linux/amd64 quay.io/podman/machine-os:5.6
+--platform=linux/arm64 quay.io/podman/machine-os:5.6
