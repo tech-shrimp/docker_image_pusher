@@ -1,1 +1,1 @@
-ubuntu:24.04
+quay.io/minio/minio
