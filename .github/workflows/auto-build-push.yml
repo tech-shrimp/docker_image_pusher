@@ -1,0 +1,43 @@
+name: 源码构建并推送阿里云
+on:
+  # 手动一键触发（最方便）
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 初始化运行环境
+      - name: 初始化运行环境
+        uses: actions/checkout@v4
+
+      # 2. 登录阿里云镜像仓库
+      - name: 登录阿里云容器镜像服务
+        env:
+          ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
+          ALIYUN_USER: ${{ secrets.ALIYUN_REGISTRY_USER }}
+          ALIYUN_PWD: ${{ secrets.ALIYUN_REGISTRY_PASSWORD }}
+        run: |
+          echo "${ALIYUN_PWD}" | docker login $ALIYUN_REGISTRY -u $ALIYUN_USER --password-stdin
+
+      # 3. 拉取 Hermes-Agent 官方源码
+      - name: 拉取官方源码
+        run: |
+          git clone --depth 1 --branch main https://github.com/NousResearch/hermes-agent.git
+
+      # 4. 从源码构建Docker镜像
+      - name: 本地构建Docker镜像
+        working-directory: ./hermes-agent
+        env:
+          ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
+          ALIYUN_NAMESPACE: ${{ secrets.ALIYUN_NAME_SPACE }}
+        run: |
+          docker build -t $ALIYUN_REGISTRY/$ALIYUN_NAMESPACE/hermes-agent:main .
+
+      # 5. 推送到你的阿里云私有仓库
+      - name: 推送镜像到阿里云
+        env:
+          ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
+          ALIYUN_NAMESPACE: ${{ secrets.ALIYUN_NAME_SPACE }}
+        run: |
+          docker push $ALIYUN_REGISTRY/$ALIYUN_NAMESPACE/hermes-agent:main
