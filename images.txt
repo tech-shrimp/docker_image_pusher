@@ -4,3 +4,16 @@ k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
 xhofe/alist:latest
 #支持指定架构
 --platform=linux/arm64 xiaoyaliu/alist
+registry.k8s.io/kube-apiserver:v1.34.5
+registry.k8s.io/kube-controller-manager:v1.34.5
+registry.k8s.io/kube-scheduler:v1.34.5
+registry.k8s.io/kube-proxy:v1.34.5
+registry.k8s.io/coredns/coredns:v1.11.3
+registry.k8s.io/pause:3.10
+registry.k8s.io/etcd:3.5.16-0
+registry.k8s.io/redis:8
+registry.k8s.io/mongodb:8
+registry.k8s.io/kafka:7
+registry.k8s.io/nginx:1.30
+registry.k8s.io/mysql:8
+registry.k8s.io/oracle:19
