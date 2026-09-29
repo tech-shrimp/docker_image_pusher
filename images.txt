@@ -7,3 +7,10 @@ vllm/vllm-openai
 vllm/vllm-omni
 lmsysorg/sglang
 infiniflow/ragflow
+alpine
+debian
+mysql
+redis
+nvidia/cuda
+pytorch/pytorch
+huggingface/transformers
