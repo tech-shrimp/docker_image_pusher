@@ -1,1 +1,1 @@
-python:3.12-alpine
+bladex/alpine-java:openjdk8-openj9_cn_slim
