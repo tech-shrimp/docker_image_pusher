@@ -1,1 +1,2 @@
-edhnt4551/ai-goofish:latest
+docker.io/library/node:22-alpine
+docker.io/library/nginx:alpine
