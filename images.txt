@@ -1,1 +1,1 @@
-ghcr.io/usagi-org/ai-goofish:latest
+edhnt4551/ai-goofish:latest
