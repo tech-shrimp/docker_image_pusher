@@ -1,1 +1,1 @@
-samanhappy/mcphub:1.1.10
+samanhappy/mcphub:1.2.1
