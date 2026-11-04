@@ -1,4 +1,4 @@
-piperra/kibana:7.9.3-alpine3.12-arm64
+jamesgarside/kibana:7.9.3
 #zhangzihan/netback:latest
 #postgres:15-alpine
 #clickhouse/clickhouse-server:26.3
