@@ -1,370 +1,221 @@
-
+```yaml
 name: Docker
 
 on:
   workflow_dispatch:
+
   push:
-    branches: [ new ]
+    branches:
+      - new
     paths:
       - 'images.txt'
+      - '.github/workflows/docker.yml'
 
-env:
-  ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
-  ALIYUN_NAME_SPACE: ${{ secrets.ALIYUN_NAME_SPACE }}
-  ALIYUN_REGISTRY_USER: ${{ secrets.ALIYUN_REGISTRY_USER }}
-  ALIYUN_REGISTRY_PASSWORD: ${{ secrets.ALIYUN_REGISTRY_PASSWORD }}
+  schedule:
+    - cron: '0 18 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docker-image-pusher
+  cancel-in-progress: false
 
 jobs:
-  build:
-    name: Pull and Push Docker Images
+  push:
     runs-on: ubuntu-latest
     timeout-minutes: 360
 
     steps:
-
       # ==========================================
-      # 1. 检查初始磁盘空间
+      # 1. Checkout
       # ==========================================
-      - name: Before freeing up disk space
-        run: |
-          echo "===== Before freeing up disk space ====="
-          df -hT
-          lsblk
-          echo "========================================="
-
-      # ==========================================
-      # 2. 扩容 GitHub Runner 磁盘
-      # ==========================================
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 2048
-          swap-size-mb: 128
-          remove-dotnet: 'true'
-          remove-haskell: 'true'
-          remove-android: 'true'
-          remove-codeql: 'true'
-          build-mount-path: '/var/lib/docker/'
-
-      # ==========================================
-      # 3. 将 containerd 存储迁移到扩容目录
-      # ==========================================
-      - name: Move containerd storage
-        run: |
-          set -eux
-
-          echo "===== Stop Docker and containerd ====="
-
-          sudo systemctl stop docker.socket || true
-          sudo systemctl stop docker || true
-          sudo systemctl stop containerd || true
-
-          echo "===== Prepare containerd directory ====="
-
-          if [ ! -L /var/lib/containerd ]; then
-
-            sudo mkdir -p /var/lib/docker/containerd
-
-            if [ -d /var/lib/containerd ]; then
-              sudo rsync -aHAX /var/lib/containerd/ /var/lib/docker/containerd/
-              sudo rm -rf /var/lib/containerd
-            fi
-
-            sudo ln -s /var/lib/docker/containerd /var/lib/containerd
-
-          fi
-
-          echo "===== Start containerd and Docker ====="
-
-          sudo systemctl start containerd
-          sudo systemctl start docker
-
-          echo "===== Check storage ====="
-
-          docker info
-          df -hT
-          df -hT /var/lib/docker
-          df -hT /var/lib/containerd
-
-          echo "===== Mount information ====="
-
-          findmnt /var/lib/docker
-          findmnt /var/lib/containerd
-
-      # ==========================================
-      # 4. 检查扩容结果
-      # ==========================================
-      - name: Free up disk space complete
-        run: |
-          echo "===== Disk space after expansion ====="
-          df -hT
-          echo "======================================"
-
-          echo "===== Docker storage ====="
-          docker info | grep -E 'Docker Root Dir|Storage Driver'
-
-          echo "===== Containerd storage ====="
-          sudo du -sh /var/lib/containerd || true
-
-      # ==========================================
-      # 5. 拉取 GitHub 仓库
-      # ==========================================
-      - name: Checkout Code
+      - name: Checkout
         uses: actions/checkout@v4
 
       # ==========================================
-      # 6. 检查镜像列表
+      # 2. Maximize build disk space
       # ==========================================
-      - name: Check images.txt
-        run: |
-          set -e
-
-          if [ ! -f images.txt ]; then
-            echo "Error: images.txt does not exist"
-            exit 1
-          fi
-
-          if ! grep -qvE '^[[:space:]]*(#|$)' images.txt; then
-            echo "Error: images.txt is empty"
-            exit 1
-          fi
-
-          echo "===== Images list ====="
-          cat images.txt
-
-      # ==========================================
-      # 7. 配置 Docker Buildx
-      # ==========================================
-      - name: Docker Setup Buildx
-        uses: docker/setup-buildx-action@v3
-
-      # ==========================================
-      # 8. 登录阿里云并转存镜像
-      # ==========================================
-      - name: Pull and Push Images to Aliyun
+      - name: Maximize build disk space
         shell: bash
         run: |
           set -Eeuo pipefail
 
-          # 检查环境变量
-          : "${ALIYUN_REGISTRY:?ALIYUN_REGISTRY is empty}"
-          : "${ALIYUN_NAME_SPACE:?ALIYUN_NAME_SPACE is empty}"
-          : "${ALIYUN_REGISTRY_USER:?ALIYUN_REGISTRY_USER is empty}"
-          : "${ALIYUN_REGISTRY_PASSWORD:?ALIYUN_REGISTRY_PASSWORD is empty}"
+          echo "======================================"
+          echo " Docker storage optimization"
+          echo "======================================"
 
-          # Docker 登录
-          echo "$ALIYUN_REGISTRY_PASSWORD" | docker login \
-            --username "$ALIYUN_REGISTRY_USER" \
-            --password-stdin "$ALIYUN_REGISTRY"
+          echo "===== Initial disk status ====="
+          df -hT
 
-          # 自动清理登录信息
-          cleanup() {
-            docker logout "$ALIYUN_REGISTRY" || true
-          }
-          trap cleanup EXIT
+          echo "===== Stop Docker and containerd ====="
+          sudo systemctl stop docker.socket || true
+          sudo systemctl stop docker || true
+          sudo systemctl stop containerd
 
-          # 统计信息
-          total=0
-          success=0
-          failed=0
+          echo "===== Prepare Docker storage ====="
+          sudo mkdir -p /var/lib/docker
 
-          # ======================================
-          # 第一次遍历：检测重复镜像名称
-          # ======================================
-          declare -A duplicate_images
-          declare -A temp_map
+          echo "===== Prepare containerd storage ====="
+          if [ -L /var/lib/containerd ]; then
+            echo "containerd is already migrated."
+            sudo readlink -f /var/lib/containerd
 
-          while IFS= read -r line || [[ -n "$line" ]]; do
+          else
+            sudo mkdir -p /var/lib/docker/containerd
 
-            # 忽略空行和注释
-            [[ -z "$line" || "$line" =~ ^[[:space:]]*# ]] && continue
+            if [ -d /var/lib/containerd ]; then
+              echo "Migrating containerd data..."
 
-            # 去掉首尾空白
-            line="$(echo "$line" | xargs)"
+              sudo rsync -aHAX --numeric-ids \
+                /var/lib/containerd/ \
+                /var/lib/docker/containerd/
 
-            # 解析镜像名称
-            image=$(echo "$line" | awk '{print $NF}')
-            image="${image%%@*}"
-
-            image_name_tag="${image##*/}"
-
-            name_space=$(echo "$image" | awk -F'/' '{
-              if (NF==3) print $2;
-              else if (NF==2) print $1;
-              else print ""
-            }')
-
-            name_space="${name_space}_"
-
-            image_name="${image_name_tag%%:*}"
-
-            echo "Check image: $image"
-            echo "Image name: $image_name"
-            echo "Namespace: $name_space"
-
-            if [[ -n "${temp_map[$image_name]:-}" ]]; then
-
-              if [[ "${temp_map[$image_name]}" != "$name_space" ]]; then
-                echo "Duplicate image name: $image_name"
-                duplicate_images[$image_name]="true"
-              fi
-
-            else
-              temp_map[$image_name]="$name_space"
+              sudo rm -rf /var/lib/containerd
             fi
 
-          done < images.txt
+            sudo ln -s \
+              /var/lib/docker/containerd \
+              /var/lib/containerd
+          fi
 
-          echo "===== Duplicate image check complete ====="
+          echo "===== Verify containerd symlink ====="
+          test -L /var/lib/containerd
+          test -d /var/lib/containerd
 
-          # ======================================
-          # 第二次遍历：逐个拉取和推送
-          # ======================================
-          while IFS= read -r line || [[ -n "$line" ]]; do
+          sudo ls -ld /var/lib/containerd
+          sudo readlink -f /var/lib/containerd
 
-            [[ -z "$line" || "$line" =~ ^[[:space:]]*# ]] && continue
+          echo "===== Start containerd and Docker ====="
+          sudo systemctl start containerd
+          sudo systemctl start docker
 
-            line="$(echo "$line" | xargs)"
+          echo "===== Check services ====="
+          sudo systemctl is-active --quiet containerd
+          sudo systemctl is-active --quiet docker
 
-            total=$((total + 1))
+          echo "===== Docker information ====="
+          docker info
 
-            echo ""
-            echo "=========================================="
-            echo "Processing image $total"
-            echo "Original: $line"
-            echo "=========================================="
+          echo "===== Docker storage directory ====="
+          docker info --format '{{.DockerRootDir}}'
 
-            # ----------------------------------
-            # 解析 platform
-            # ----------------------------------
-            platform=$(echo "$line" | grep -oE -- '--platform(=|[[:space:]]+)[^[:space:]]+' | head -n 1 | sed -E 's/^--platform[=[:space:]]*//' || true)
+          echo "===== Disk status ====="
+          df -hT
 
-            if [[ -z "$platform" ]]; then
-              platform_prefix=""
-            else
-              platform_prefix="${platform//\//_}_"
-            fi
+          sudo df -hT /var/lib/docker
+          sudo df -hT /var/lib/containerd
 
-            echo "Platform: ${platform:-default}"
+          echo "===== Storage usage ====="
+          sudo du -sh /var/lib/docker
+          sudo du -sh /var/lib/containerd
 
-            # ----------------------------------
-            # 解析镜像地址
-            # ----------------------------------
-            image=$(echo "$line" | awk '{print $NF}')
+          echo "===== Storage optimization completed ====="
 
-            image_without_digest="${image%%@*}"
-            image_name_tag="${image_without_digest##*/}"
+      # ==========================================
+      # 3. Clean unnecessary files
+      # ==========================================
+      - name: Clean runner disk
+        shell: bash
+        run: |
+          set -Eeuo pipefail
 
-            name_space=$(echo "$image_without_digest" | awk -F'/' '{
-              if (NF==3) print $2;
-              else if (NF==2) print $1;
-              else print ""
-            }')
+          echo "===== Clean unnecessary packages ====="
 
-            image_name="${image_name_tag%%:*}"
+          sudo rm -rf /usr/local/share/powershell
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
 
-            # ----------------------------------
-            # 检测重名
-            # ----------------------------------
-            name_space_prefix=""
+          echo "===== Clean apt cache ====="
+          sudo apt-get clean
 
-            if [[ -n "${duplicate_images[$image_name]:-}" && -n "$name_space" ]]; then
-              name_space_prefix="${name_space}_"
-            fi
+          echo "===== Disk status ====="
+          df -hT
 
-            # ----------------------------------
-            # 生成阿里云目标名称
-            # ----------------------------------
-            new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
+      # ==========================================
+      # 4. Login to Aliyun Registry
+      # ==========================================
+      - name: Login to Aliyun Registry
+        shell: bash
+        env:
+          ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
+          ALIYUN_USERNAME: ${{ secrets.ALIYUN_USERNAME }}
+          ALIYUN_PASSWORD: ${{ secrets.ALIYUN_PASSWORD }}
+        run: |
+          set -Eeuo pipefail
 
-            echo "Source image: $image"
-            echo "Target image: $new_image"
+          echo "$ALIYUN_PASSWORD" | docker login \
+            "$ALIYUN_REGISTRY" \
+            -u "$ALIYUN_USERNAME" \
+            --password-stdin
 
-            # ----------------------------------
-            # 拉取镜像
-            # ----------------------------------
-            echo "===== Docker Pull ====="
+      # ==========================================
+      # 5. Push Docker images
+      # ==========================================
+      - name: Push Docker images
+        shell: bash
+        env:
+          ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
+          ALIYUN_NAMESPACE: ${{ secrets.ALIYUN_NAMESPACE }}
+        run: |
+          set -Eeuo pipefail
 
-            if ! docker pull $line; then
-              echo "ERROR: Pull failed: $line"
-              failed=$((failed + 1))
-              continue
-            fi
-
-            # ----------------------------------
-            # 打标签
-            # ----------------------------------
-            echo "===== Docker Tag ====="
-
-            if ! docker tag "$image" "$new_image"; then
-              echo "ERROR: Tag failed: $image"
-              docker image rm "$image" || true
-              failed=$((failed + 1))
-              continue
-            fi
-
-            # ----------------------------------
-            # 推送镜像
-            # ----------------------------------
-            echo "===== Docker Push ====="
-
-            if ! docker push "$new_image"; then
-              echo "ERROR: Push failed: $new_image"
-
-              docker image rm "$new_image" || true
-              docker image rm "$image" || true
-
-              failed=$((failed + 1))
-              continue
-            fi
-
-            # ----------------------------------
-            # 删除本地镜像
-            # ----------------------------------
-            echo "===== Remove local images ====="
-
-            docker image rm "$new_image" "$image" || true
-
-            # 清理无用数据
-            docker builder prune -af || true
-
-            success=$((success + 1))
-
-            # ----------------------------------
-            # 磁盘空间监控
-            # ----------------------------------
-            echo "===== Disk usage ====="
-
-            docker system df
-            df -hT
-
-            echo "===== Image completed ====="
-
-          done < images.txt
-
-          # ======================================
-          # 9. 输出最终结果
-          # ======================================
-          echo ""
-          echo "=========================================="
-          echo "Docker image transfer completed"
-          echo "Total: $total"
-          echo "Success: $success"
-          echo "Failed: $failed"
-          echo "=========================================="
-
-          if [[ "$failed" -gt 0 ]]; then
+          if [ ! -f images.txt ]; then
+            echo "images.txt not found!"
             exit 1
           fi
 
+          while IFS= read -r image || [ -n "$image" ]; do
+
+            image="${image%%#*}"
+            image="$(echo "$image" | xargs)"
+
+            [ -z "$image" ] && continue
+
+            echo "======================================"
+            echo "Processing: $image"
+            echo "======================================"
+
+            name="${image##*/}"
+            target="${ALIYUN_REGISTRY}/${ALIYUN_NAMESPACE}/${name}"
+
+            echo "Source: $image"
+            echo "Target: $target"
+
+            docker pull "$image"
+
+            docker tag "$image" "$target"
+
+            docker push "$target"
+
+            echo "Successfully pushed: $target"
+
+            docker image rm "$image" "$target" || true
+
+            echo "===== Current disk status ====="
+            df -h /var/lib/docker
+
+          done < images.txt
+
       # ==========================================
-      # 10. 最终磁盘空间
+      # 6. Logout and cleanup
       # ==========================================
-      - name: Final disk report
+      - name: Cleanup
         if: always()
+        shell: bash
         run: |
-          echo "===== Final disk usage ====="
+          echo "===== Docker cleanup ====="
+
+          docker logout "${{ secrets.ALIYUN_REGISTRY }}" || true
+
+          docker image prune -af || true
+          docker builder prune -af || true
+
+          echo "===== Final disk status ====="
           df -hT
 
-          echo "===== Docker disk usage ====="
-          docker system df || true
+          sudo df -hT /var/lib/docker || true
+
+          echo "===== Workflow completed ====="
+```
