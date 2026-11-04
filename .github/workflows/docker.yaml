@@ -136,19 +136,44 @@ jobs:
       # ==========================================
       # 4. Login to Aliyun Registry
       # ==========================================
-      - name: Login to Aliyun Registry
+      - name: Login to Aliyun ACR
         shell: bash
         env:
           ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
           ALIYUN_USERNAME: ${{ secrets.ALIYUN_USERNAME }}
           ALIYUN_PASSWORD: ${{ secrets.ALIYUN_PASSWORD }}
         run: |
-          set -Eeuo pipefail
+          set -euo pipefail
 
-          echo "$ALIYUN_PASSWORD" | docker login \
-            "$ALIYUN_REGISTRY" \
-            -u "$ALIYUN_USERNAME" \
-            --password-stdin
+          echo "===== Check Aliyun credentials ====="
+
+          if [ -z "${ALIYUN_REGISTRY:-}" ]; then
+            echo "::error::ALIYUN_REGISTRY is empty"
+            exit 1
+          fi
+
+          if [ -z "${ALIYUN_USERNAME:-}" ]; then
+            echo "::error::ALIYUN_USERNAME is empty. Check GitHub Secrets."
+            exit 1
+          fi
+
+          if [ -z "${ALIYUN_PASSWORD:-}" ]; then
+            echo "::error::ALIYUN_PASSWORD is empty"
+            exit 1
+          fi
+
+          echo "Registry: $ALIYUN_REGISTRY"
+          echo "Username: configured"
+          echo "Password: configured"
+
+          echo "===== Skopeo login ====="
+
+          printf '%s' "$ALIYUN_PASSWORD" | skopeo login \
+            --username "$ALIYUN_USERNAME" \
+            --password-stdin \
+            "$ALIYUN_REGISTRY"
+
+          echo "===== Login successful ====="
 
       # ==========================================
       # 5. Push Docker images
