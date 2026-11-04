@@ -1,2 +1,1 @@
-docker.io/library/node:22-alpine
-docker.io/library/nginx:alpine
+paddlecloud/paddleocr:2.6-cpu-latest
