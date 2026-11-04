@@ -1,4 +1,4 @@
-```yaml
+
 name: Docker
 
 on:
@@ -218,4 +218,3 @@ jobs:
           sudo df -hT /var/lib/docker || true
 
           echo "===== Workflow completed ====="
-```
