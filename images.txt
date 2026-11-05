@@ -1,4 +1,4 @@
-jamesgarside/kibana:7.9.3
+ghcr.io/kurok1/mcp-server-mysql:latest
 #zhangzihan/netback:latest
 #postgres:15-alpine
 #clickhouse/clickhouse-server:26.3
