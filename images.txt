@@ -1,1 +1,1 @@
-bladex/alpine-java:openjdk8-openj9_cn_slim
+ghcr.io/vectorize-io/hindsight:1.2
