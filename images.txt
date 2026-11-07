@@ -1,8 +1,20 @@
 
---platform=linux/amd64 flashcatcloud/nightingale:9.1.1
---platform=linux/arm64 flashcatcloud/nightingale:9.1.1
---platform=linux/amd64 docker.io/library/nginx:stable-alpine
---platform=linux/arm64 docker.io/library/nginx:stable-alpine
 
---platform=linux/amd64 docker.io/prom/prometheus:v2.54.1
---platform=linux/arm64 docker.io/prom/prometheus:v2.54.1
+--platform=linux/amd64 lscr.io/linuxserver/qbittorrent:latest
+--platform=linux/arm64 lscr.io/linuxserver/qbittorrent:latest
+
+--platform=linux/amd64 ghcr.io/flaresolverr/flaresolverr:latest
+--platform=linux/arm64 ghcr.io/flaresolverr/flaresolverr:latest
+
+--platform=linux/amd64 lscr.io/linuxserver/prowlarr:latest
+--platform=linux/arm64 lscr.io/linuxserver/radarr:latest
+--platform=linux/amd64 lscr.io/linuxserver/sonarr:latest
+
+--platform=linux/amd64 fallenbagel/jellyseerr:latest
+--platform=linux/arm64 fallenbagel/jellyseerr:latest
+
+--platform=linux/amd64 lscr.io/linuxserver/jellyfin:latest
+--platform=linux/arm64 lscr.io/linuxserver/jellyfin:latest
+
+--platform=linux/amd64 emby/embyserver:latest
+--platform=linux/arm64 emby/embyserver:latest
