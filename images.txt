@@ -5,3 +5,5 @@ xhofe/alist:latest
 #支持指定架构
 --platform=linux/arm64 xiaoyaliu/alist
 docker.xuanyuan.run/nginx:latest
+redis:8.10
+redis:8.10-alpine
