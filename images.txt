@@ -7,3 +7,4 @@ xhofe/alist:latest
 #docker.xuanyuan.run/nginx:latest
 redis:8.10
 redis:8.10-alpine
+gcr.io/etcd-development/etcd:v3.5.35
