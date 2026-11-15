@@ -1,1 +1,1 @@
-ghcr.io/vectorize-io/hindsight:1.2.0
+ghcr.io/immich-app/immich-server:v3.4.1
