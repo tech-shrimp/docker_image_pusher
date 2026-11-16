@@ -75,6 +75,7 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/${platform_prefix}${name_space_prefix}${image_name_tag}"
 
+            skopeo inspect --raw "docker://$image" | jq .
             echo "skopeo copy docker://$image -> docker://$new_image"
 
             if [ -n "$platform" ]; then
