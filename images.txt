@@ -8,8 +8,7 @@ docker.io/louislam/uptime-kuma:2
 docker.io/rustdesk/rustdesk-server:latest
 portainer/portainer-ee:sts
 
-docker.io/laoyutang/l4d2-pure:latest
-docker.io/laoyutang/l4d2-manager-next:latest
+docker.io/xmb233/l4d2server:ubuntu24.04
 docker.io/tailscale/tailscale:stable
 docker.io/alpine:latest
 docker.io/ghostchu/peerbanhelper:latest
