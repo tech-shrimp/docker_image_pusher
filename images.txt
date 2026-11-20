@@ -1,9 +1,9 @@
 nginx
 tailscale/tailscale
 #支持私库
-xhofe/alist:latest
+#xhofe/alist:latest
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+#--platform=linux/arm64 xiaoyaliu/alist
 linuxserver/webtop:debian-xfce
 portainer/portainer-ce:latest
 debian:stable
