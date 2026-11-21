@@ -1,4 +1,18 @@
-mariadb:10.6.24-jammy
+unbound-mailcow	ghcr.io/mailcow/unbound:1.26.2-1
+clamd-mailcow	ghcr.io/mailcow/clamd:1.4.7-1
+rspamd-mailcow	ghcr.io/mailcow/rspamd:4.2.3-2
+php-fpm-mailcow	ghcr.io/mailcow/phpfpm:8.2.36-1
+sogo-mailcow	ghcr.io/mailcow/sogo:5.12.13-1
+dovecot-mailcow	ghcr.io/mailcow/dovecot:2.3.21.1-5
+postfix-mailcow	ghcr.io/mailcow/postfix:3.10.13-1
+postfix-tlspol-mailcow	ghcr.io/mailcow/postfix-tlspol:1.14.5
+nginx-mailcow	ghcr.io/mailcow/nginx:1.30.7-1
+acme-mailcow	ghcr.io/mailcow/acme:1.99
+netfilter-mailcow	ghcr.io/mailcow/netfilter:1.67
+watchdog-mailcow	ghcr.io/mailcow/watchdog:2.13
+dockerapi-mailcow	ghcr.io/mailcow/dockerapi:2.16
+olefy-mailcow	ghcr.io/mailcow/olefy:1.16
+#mariadb:10.6.24-jammy
 #moby/buildkit:buildx-stable-1
 #python:3.10-slim
 #支持私库
